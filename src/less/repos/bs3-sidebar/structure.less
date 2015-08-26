@@ -1,0 +1,668 @@
+// |--------------------------------------------------------------------------
+// | Structure
+// |--------------------------------------------------------------------------
+// |
+// | Table of contents:
+// |
+// | - Base
+// | -- Toggle (open/close animation)
+// | --- With CSS3 3D transform
+// | --- Without CSS3 3D transform
+// | -- Overlay
+// | -- Transitions
+// |
+// | - Content types
+// | -- Logo
+// | -- Headline
+// | -- Navigation
+// | -- Social links
+// | -- Spacer
+// |
+// | - Content effects
+// | -- Push content
+// | -- Overflow
+// |
+// | - Header attachment
+// | -- Attached
+// | -- Detached
+// |
+// | - Enabled
+// | -- Hidden state
+// | --- Phone
+// | --- Tablet
+// | --- Desktop
+// | --- Large desktop
+// |
+
+.inner-wrapper {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.sidebar {
+	position: fixed;
+	display: none;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	background-color: @bs3-sidebar-background-color;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&.sidebar-left {
+		width: @bs3-sidebar-left-width;
+		.box-shadow(@bs3-sidebar-left-box-shadow);
+	}
+
+	&.sidebar-right {
+		width: @bs3-sidebar-right-width;
+		.box-shadow(@bs3-sidebar-right-box-shadow);
+	}
+}
+
+// Toggle
+.csstransforms3d {
+
+	.sidebar {
+
+		&.sidebar-left {
+			.translate3d(-@bs3-sidebar-left-width, 0, 0);
+		}
+
+		&.sidebar-right {
+			right: 0;
+			.translate3d(@bs3-sidebar-right-width, 0, 0);
+		}
+	}
+
+	.sidebar-left-open {
+
+		.sidebar-left {
+			.translate3d(0, 0, 0);
+		}
+
+		.inner-wrapper {
+			.translate3d(@bs3-sidebar-left-width, 0, 0);
+		}
+	}
+
+	.sidebar-right-open {
+
+		.sidebar-right {
+			.translate3d(0, 0, 0);
+		}
+
+		.inner-wrapper {
+			.translate3d(-@bs3-sidebar-right-width, 0, 0);
+		}
+	}
+}
+.no-csstransforms3d {
+
+	.sidebar {
+
+		&.sidebar-left {
+			left: -@bs3-sidebar-left-width;
+		}
+
+		&.sidebar-right {
+			right: -@bs3-sidebar-right-width;
+		}
+	}
+
+	.sidebar-left-open {
+
+		.sidebar-left {
+			left: 0;
+		}
+
+		.inner-wrapper {
+			margin-left: @bs3-sidebar-left-width;
+			margin-right: -@bs3-sidebar-left-width;
+		}
+	}
+
+	.sidebar-right-open {
+
+		.sidebar-right {
+			right: 0;
+		}
+
+		.inner-wrapper {
+			margin-left: -@bs3-sidebar-right-width;
+		}
+	}
+}
+
+// Transitions
+.no-touch {
+
+	.sidebar {
+
+		.sidebar-nav {
+
+			.sidebar-nav-link,
+			.sidebar-nav-dropdown {
+
+				a {
+					.transition(all @transition-time ease-in-out);
+
+					.icon {
+						.transition(all @transition-time ease-in-out);
+					}
+
+					&:before {
+						.transition(all @transition-time ease-in-out);
+					}
+				}
+			}
+		}
+
+		.sidebar-social-links {
+
+			> a {
+				.transition(background-color @transition-time ease-in-out);
+
+				.icon {
+					.transition(color @transition-time ease-in-out);
+				}
+			}
+		}
+	}
+}
+.inner-wrapper,
+.sidebar {
+	.transition(all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95));
+}
+
+// Logo
+.sidebar {
+
+	.sidebar-logo {
+		display: block;
+		text-align: center;
+		overflow: hidden;
+
+		background-color: @bs3-sidebar-logo-background-color;
+		background-color: @bs3-sidebar-logo-background-color-rgba;
+
+		border-bottom-width: @bs3-sidebar-logo-border-width;
+		border-bottom-style: @bs3-sidebar-logo-border-style;
+		border-bottom-color: @bs3-sidebar-logo-border-color;
+		border-bottom-color: @bs3-sidebar-logo-border-color-rgba; // rgba
+
+		a {
+			display: block;
+			padding: @bs3-sidebar-logo-spacing 0;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.sidebar-logo-image {
+			display: block;
+			margin: auto;
+			height: @bs3-sidebar-logo-image-height;
+			width: @bs3-sidebar-logo-image-width;
+			.img-retina(@bs3-sidebar-logo-image-1x-source, @bs3-sidebar-logo-image-2x-source, @bs3-sidebar-logo-image-width, @bs3-sidebar-logo-image-height);
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		.sidebar-logo-text {
+			font-family: @bs3-sidebar-logo-textual-font-family;
+			font-size: @bs3-sidebar-logo-textual-font-size;
+			font-weight: @bs3-sidebar-logo-textual-font-weight;
+			color: @bs3-sidebar-logo-textual-font-color;
+			padding: 0;
+			margin: 0;
+		}
+
+		.sidebar-logo-slogan {
+			font-family: @bs3-sidebar-logo-slogan-font-family;
+			font-size: @bs3-sidebar-logo-slogan-font-size;
+			font-weight: @bs3-sidebar-logo-slogan-font-weight;
+			color: @bs3-sidebar-logo-slogan-font-color;
+			margin-top: 3px;
+		}
+	}
+}
+
+// Heading
+.sidebar {
+
+	.sidebar-heading {
+		display: block;
+
+		background-color: @bs3-sidebar-nav-headline-background-color;
+		background-color: @bs3-sidebar-nav-headline-background-color-rgba; // rgba
+
+		border-bottom-width: @bs3-sidebar-nav-headline-border-width;
+		border-bottom-style: @bs3-sidebar-nav-headline-border-style;
+		border-bottom-color: @bs3-sidebar-nav-headline-border-color;
+		border-bottom-color: @bs3-sidebar-nav-headline-border-color-rgba; // rgba
+
+		.sidebar-title {
+			margin: 0;
+			padding: 7px @bs3-sidebar-nav-headline-indentation;
+
+			font-family: @bs3-sidebar-nav-headline-font-family;
+			font-weight: @bs3-sidebar-nav-headline-font-weight;
+			font-size: @bs3-sidebar-nav-headline-font-size;
+			.line-height(@bs3-sidebar-nav-headline-font-size);
+
+			color: @bs3-sidebar-nav-headline-font-color;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// Navigation
+.sidebar {
+
+	.sidebar-nav {
+		list-style: none;
+
+		&,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+		}
+
+		.label,
+		.badge {
+			.pull-right;
+		}
+
+		.sidebar-nav-link,
+		.sidebar-nav-dropdown {
+
+			> a {
+				position: relative;
+				display: block;
+				padding-top: 12px;
+				padding-bottom: 12px;
+
+				padding-right: @bs3-sidebar-nav-link-indentation;
+
+				font-family: @bs3-sidebar-nav-link-font-family;
+				font-weight: @bs3-sidebar-nav-link-font-weight;
+				font-size: @bs3-sidebar-nav-link-font-size;
+				.line-height(@bs3-sidebar-nav-link-font-size);
+				color: @bs3-sidebar-nav-link-font-color;
+
+				background-color: @bs3-sidebar-nav-link-background-color;
+				background-color: @bs3-sidebar-nav-link-background-color-rgba; // rgba
+
+				border-bottom-width: @bs3-sidebar-nav-link-border-width;
+				border-bottom-style: @bs3-sidebar-nav-link-border-style;
+				border-bottom-color: @bs3-sidebar-nav-link-border-color;
+				border-bottom-color: @bs3-sidebar-nav-link-border-color-rgba; // rgba
+
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				-webkit-tap-highlight-color: transparent;
+
+				.icon {
+					float: left;
+					color: @bs3-sidebar-nav-link-icon-color;
+					margin-left: -@bs3-sidebar-nav-link-icon-max-width;
+				}
+
+				&:hover {
+					color: @bs3-sidebar-nav-link-hover-font-color;
+
+					background-color: @bs3-sidebar-nav-link-hover-background-color;
+					background-color: @bs3-sidebar-nav-link-hover-background-color-rgba; // rgba
+
+					border-bottom-color: @bs3-sidebar-nav-link-hover-border-color;
+					border-bottom-color: @bs3-sidebar-nav-link-hover-border-color-rgba; // rgba
+
+					.icon {
+						color: @bs3-sidebar-nav-link-hover-icon-color;
+					}
+				}
+
+				// Remove text decoration from :hover, :focus and :active (default in some browsers)
+				&:hover,
+				&:focus,
+				&:active {
+					text-decoration: none;
+				}
+			}
+
+			&.sidebar-nav-active {
+
+				> a {
+
+					&,
+					&:hover {
+						color: @bs3-sidebar-nav-link-active-font-color;
+
+						background-color: @bs3-sidebar-nav-link-active-background-color;
+						background-color: @bs3-sidebar-nav-link-active-background-color-rgba; // rgba
+
+						border-bottom-color: @bs3-sidebar-nav-link-active-border-color;
+						border-bottom-color: @bs3-sidebar-nav-link-active-border-color-rgba; // rgba
+					}
+
+					.icon {
+						color: @bs3-sidebar-nav-link-active-icon-color;
+					}
+				}
+			}
+		}
+
+		.sidebar-nav-dropdown {
+
+			> a {
+				color: @bs3-sidebar-nav-dropdown-font-color;
+
+				&:before {
+					float: right;
+					padding: 0;
+					margin: 0;
+					margin-left: 10px;
+					line-height: inherit;
+
+					font-family: @bs3-sidebar-nav-dropdown-indicator-font-family;
+					font-size: @bs3-sidebar-nav-dropdown-indicator-font-size;
+					color: @bs3-sidebar-nav-dropdown-indicator-color;
+					content: @bs3-sidebar-nav-dropdown-indicator-icon;
+				}
+
+				&:hover {
+					color: @bs3-sidebar-nav-dropdown-hover-font-color;
+
+					&:before {
+						color: @bs3-sidebar-nav-dropdown-hover-indicator-color;
+					}
+				}
+			}
+
+			&.sidebar-nav-active {
+
+				> a {
+
+					&:before {
+						.rotate(90deg);
+					}
+
+					&,
+					&:hover {
+						color: @bs3-sidebar-nav-dropdown-active-font-color;
+
+						&:before {
+							color: @bs3-sidebar-nav-dropdown-active-indicator-color;
+						}
+					}
+				}
+			}
+
+			.sidebar-nav-dropdown-menu {
+				position: relative;
+				display: none;
+				overflow: hidden;
+
+				&.sidebar-nav-active {
+					display: block;
+				}
+
+				.sidebar-nav-dropdown,
+				.sidebar-nav-link {
+					background-color: @bs3-sidebar-nav-dropdown-menu-background-color;
+					background-color: @bs3-sidebar-nav-dropdown-menu-background-color-rgba;
+
+					> a {
+						font-family: @bs3-sidebar-nav-dropdown-menu-link-font-family;
+						font-weight: @bs3-sidebar-nav-dropdown-menu-link-font-weight;
+						font-size: @bs3-sidebar-nav-dropdown-menu-link-font-size;
+						.line-height(@bs3-sidebar-nav-dropdown-menu-link-font-size);
+					}
+				}
+
+				.sidebar-nav-link {
+
+					> a {
+						color: @bs3-sidebar-nav-dropdown-menu-link-font-color;
+
+						&:hover {
+							color: @bs3-sidebar-nav-dropdown-menu-link-hover-font-color;
+						}
+					}
+
+					&.sidebar-nav-active {
+
+						> a {
+
+							&,
+							&:hover {
+								color: @bs3-sidebar-nav-dropdown-menu-link-active-font-color;
+							}
+						}
+					}
+				}
+
+				.sidebar-nav-dropdown {
+
+					> a {
+						color: @bs3-sidebar-nav-dropdown-menu-dropdown-font-color;
+
+						&:hover {
+							color: @bs3-sidebar-nav-dropdown-menu-dropdown-hover-font-color;
+						}
+					}
+
+					&.sidebar-nav-active {
+
+						> a {
+
+							&,
+							&:hover {
+								color: @bs3-sidebar-nav-dropdown-menu-dropdown-active-font-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Indentation
+.sidebar {
+
+	.sidebar-nav {
+
+		> li {
+
+			> a {
+				.bs3-sidebar-link-indentation(1);
+			}
+
+			> ul > li {
+
+				> a {
+					.bs3-sidebar-link-indentation(2);
+				}
+
+				> ul > li {
+
+					> a {
+						.bs3-sidebar-link-indentation(3);
+					}
+
+					> ul > li {
+
+						> a {
+							.bs3-sidebar-link-indentation(4);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Social links
+.sidebar {
+
+	.sidebar-social-links {
+		text-align: center;
+
+		> a {
+			display: inline-block;
+			background-color: transparent;
+			height: @bs3-sidebar-social-link-height;
+			width: @bs3-sidebar-social-link-width;
+			border-radius: @bs3-sidebar-social-link-border-radius;
+			margin-top: 8px;
+			margin-bottom: 8px;
+
+			.icon {
+				color: @bs3-sidebar-social-link-icon-color;
+				font-size: @bs3-sidebar-social-link-icon-font-size;
+				line-height: @bs3-sidebar-social-link-height;
+			}
+
+			&:hover {
+
+				.icon {
+					color: @bs3-sidebar-social-link-icon-hover-color;
+				}
+
+				&.sidebar-social-link-facebook {
+					background-color: @social-link-color-facebook;
+				}
+				&.sidebar-social-link-twitter {
+					background-color: @social-link-color-twitter;
+				}
+				&.sidebar-social-link-instagram {
+					background-color: @social-link-color-instagram;
+				}
+				&.sidebar-social-link-linkedin {
+					background-color: @social-link-color-linkedin;
+				}
+				&.sidebar-social-link-pinterest {
+					background-color: @social-link-color-pinterest;
+				}
+				&.sidebar-social-link-vimeo {
+					background-color: @social-link-color-vimeo;
+				}
+				&.sidebar-social-link-youtube {
+					background-color: @social-link-color-youtube;
+				}
+			}
+
+			+ a {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+// Spacer
+.sidebar {
+
+	.sidebar-spacer {
+		display: block;
+		height: @bs3-sidebar-spacer-height;
+	}
+}
+
+// --------------------------------------------------
+// Enabled
+// --------------------------------------------------
+//
+// Introduction
+// - Defines in which screen sizes the sidebar can
+// - be visible.
+// - If the screen size is altered to a size, which
+// - does not have the visibility class set, the
+// - sidebar automatically closes.
+// - By default the sidebar is always hidden. It's
+// - therefor necessary to add the visibility classes
+// - to display the sidebar at all.
+//
+// Why use this? It's just extra work and creating
+// a uglier code base?
+// - To prevent that the sidebar is being displayed,
+// - in unintended screen sizes which can break the
+// - websites layout.
+// - As mentioned above, the sidebar is always
+// - hidden by default. This has been done, to
+// - enforce this line of thinking.
+//
+@media @media-query-mobile-only {
+
+	.sidebar-left-enabled-xs {
+
+		.sidebar-left {
+			display: block;
+		}
+	}
+
+	.sidebar-right-enabled-xs {
+
+		.sidebar-right {
+			display: block;
+		}
+	}
+}
+@media @media-query-tablet-only {
+
+	.sidebar-left-enabled-sm {
+
+		.sidebar-left {
+			display: block;
+		}
+	}
+
+	.sidebar-right-enabled-sm {
+
+		.sidebar-right {
+			display: block;
+		}
+	}
+}
+@media @media-query-desktop-only {
+
+	.sidebar-left-enabled-md {
+
+		.sidebar-left {
+			display: block;
+		}
+	}
+
+	.sidebar-right-enabled-md {
+
+		.sidebar-right {
+			display: block;
+		}
+	}
+}
+@media @media-query-large-desktop-only {
+
+	.sidebar-left-enabled-lg {
+
+		.sidebar-left {
+			display: block;
+		}
+	}
+
+	.sidebar-right-enabled-lg {
+
+		.sidebar-right {
+			display: block;
+		}
+	}
+}

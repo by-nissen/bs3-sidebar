@@ -1,0 +1,126 @@
+// |--------------------------------------------------------------------------
+// | Intro
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .intro
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@intro-title-font-color: #000;
+@intro-description-font-color: @intro-title-font-color;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Intro
+.intro {
+  background: url('../img/bg-intro.jpg') center center;
+
+  .intro-heading {
+
+    .intro-title {
+      color: @intro-title-font-color;
+      font-weight: @headings-font-weight;
+    }
+  }
+
+  .intro-description {
+
+    .lead {
+      color: @intro-description-font-color;
+      font-weight: @headings-font-weight-semi-light;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+  // Intro
+  .intro {
+
+    .intro-title {
+      margin: 6px 0;
+    }
+  }
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+  // Intro
+  .intro {
+    padding: 10px 0;
+  }
+}
+
+// Tablet
+@media @media-query-tablet {
+
+  // Intro
+  .intro {
+    padding: 40px 0;
+
+    .intro-title {
+      margin: 20px 0;
+    }
+  }
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+  // Intro
+  .intro {
+  }
+}
+
+// Desktop
+@media @media-query-desktop {
+
+  // Intro
+  .intro {
+    padding: 60px 0;
+
+    .intro-title {
+      margin: 40px 0;
+    }
+  }
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+  // Intro
+  .intro {
+  }
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+  // Intro
+  .intro {
+
+    .intro-title {
+      margin: 50px 0;
+    }
+  }
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+  // Intro
+  .intro {
+  }
+}

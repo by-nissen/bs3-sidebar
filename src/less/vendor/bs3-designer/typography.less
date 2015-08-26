@@ -1,0 +1,269 @@
+// |--------------------------------------------------------------------------
+// | Typography
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .prefix-xxxxxx
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Font weight
+@bs3-designer-headings-font-weight-light: 	    300;
+@bs3-designer-headings-font-weight-semi-light:  300;
+@bs3-designer-headings-font-weight: 		    400;
+@bs3-designer-headings-font-weight-semi-bold:	500;
+@bs3-designer-headings-font-weight-bold: 	    700;
+
+@bs3-designer-font-weight-light: 	    300;
+@bs3-designer-font-weight-semi-light:	@bs3-designer-font-weight-light;
+@bs3-designer-font-weight: 		        400;
+@bs3-designer-font-weight-semi-bold:    @bs3-designer-font-weight;
+@bs3-designer-font-weight-bold: 	    700;
+
+// Line height
+@bs3-designer-headings-h1-line-height: 	bs3-designer-mixin-line-height(@font-size-h1);
+@bs3-designer-headings-h2-line-height: 	bs3-designer-mixin-line-height(@font-size-h2);
+@bs3-designer-headings-h3-line-height:	bs3-designer-mixin-line-height(@font-size-h3);
+@bs3-designer-headings-h4-line-height: 	bs3-designer-mixin-line-height(@font-size-h4);
+@bs3-designer-headings-h5-line-height: 	bs3-designer-mixin-line-height(@font-size-h5);
+@bs3-designer-headings-h6-line-height: 	bs3-designer-mixin-line-height(@font-size-h6);
+
+@bs3-designer-line-height-small:	floor((@font-size-small * @line-height-base));
+@bs3-designer-line-height-large:	floor((@font-size-large * @line-height-base));
+
+// Letter spacing
+@bs3-designer-headings-h1-letter-spacing:   -2px;
+@bs3-designer-headings-h2-letter-spacing:   -2px;
+@bs3-designer-headings-h3-letter-spacing:   -1px;
+@bs3-designer-headings-h4-letter-spacing:   @bs3-designer-headings-h3-letter-spacing;
+@bs3-designer-headings-h5-letter-spacing:   @bs3-designer-headings-h4-letter-spacing;
+@bs3-designer-headings-h6-letter-spacing:	@bs3-designer-headings-h5-letter-spacing;
+
+// Font size (responsiveness)
+@bs3-designer-headings-font-size-xs: 0.80;
+@bs3-designer-headings-font-size-sm: 0.85;
+@bs3-designer-headings-font-size-md: 0.9;
+@bs3-designer-headings-font-size-lg: 1.0;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Colouring
+.font-color-white {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+}
+.font-color-primary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-primary;
+	}
+}
+.font-color-secondary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-secondary;
+	}
+}
+.font-color-tertiary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-tertiary;
+	}
+}
+.font-color-quarternary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-quarternary;
+	}
+}
+
+// Font weight
+body {
+	font-weight: @bs3-designer-font-weight;
+
+	.light { font-weight: @bs3-designer-font-weight-light; }
+	.semi-light { font-weight: @bs3-designer-font-weight-semi-light; }
+	.semi-bold { font-weight: @bs3-designer-font-weight-semi-bold; }
+	.bold, strong { font-weight: @bs3-designer-font-weight-bold; }
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+    .lead {
+		font-weight: @bs3-designer-headings-font-weight;
+
+		&.light { font-weight: @bs3-designer-headings-font-weight-light; }
+		&.semi-light { font-weight: @bs3-designer-headings-font-weight-semi-light; }
+		&.semi-bold { font-weight: @bs3-designer-headings-font-weight-semi-bold; }
+		strong, &.bold { font-weight: @bs3-designer-headings-font-weight-bold; }
+	}
+}
+
+// Letter spacing
+h1 { letter-spacing: @bs3-designer-headings-h1-letter-spacing; }
+h2 { letter-spacing: @bs3-designer-headings-h2-letter-spacing; }
+h3 { letter-spacing: @bs3-designer-headings-h3-letter-spacing; }
+h4 { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
+h5 { letter-spacing: @bs3-designer-headings-h5-letter-spacing; }
+h6 { letter-spacing: @bs3-designer-headings-h6-letter-spacing; }
+.lead { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
+
+// Smoothing
+body {
+
+	&,
+	a,
+	p,
+	span,
+	input { .bs3-designer-mixin-font-smoothing(); }
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 { .bs3-designer-mixin-font-smoothing(); }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile-only {
+  .text-left-xs-only { text-align: left; }
+  .text-right-xs-only { text-align: right; }
+  .text-center-xs-only { text-align: center; }
+
+  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-xs)); }
+  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-xs)); }
+  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-xs)); }
+  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs)); }
+  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-xs)); }
+  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-xs)); }
+  .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs)); }
+}
+@media @media-query-mobile {
+  .text-left-xs { text-align: left; }
+  .text-right-xs { text-align: right; }
+  .text-center-xs { text-align: center; }
+}
+
+// Tablet
+@media @media-query-tablet-only {
+  .text-left-sm-only { text-align: left; }
+  .text-right-sm-only { text-align: right; }
+  .text-center-sm-only { text-align: center; }
+
+  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-sm)); }
+  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-sm)); }
+  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-sm)); }
+  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm)); }
+  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-sm)); }
+  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-sm)); }
+  .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm)); }
+}
+@media @media-query-tablet {
+  .text-left-sm { text-align: left; }
+  .text-right-sm { text-align: right; }
+  .text-center-sm { text-align: center; }
+}
+
+// Desktop
+@media @media-query-desktop-only {
+  .text-left-md-only { text-align: left; }
+  .text-right-md-only { text-align: right; }
+  .text-center-md-only { text-align: center; }
+
+  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-md)); }
+  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-md)); }
+  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-md)); }
+  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md)); }
+  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-md)); }
+  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-md)); }
+  .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md)); }
+}
+@media @media-query-desktop {
+  .text-left-md { text-align: left; }
+  .text-right-md { text-align: right; }
+  .text-center-md { text-align: center; }
+}
+
+// Large desktop
+@media @media-query-large-desktop-only {
+  .text-left-lg-only { text-align: left; }
+  .text-right-lg-only { text-align: right; }
+  .text-center-lg-only { text-align: center; }
+
+  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-lg)); }
+  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-lg)); }
+  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-lg)); }
+  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg)); }
+  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-lg)); }
+  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-lg)); }
+  .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg)); }
+}
+@media @media-query-large-desktop {
+  .text-left-lg { text-align: left; }
+  .text-right-lg { text-align: right; }
+  .text-center-lg { text-align: center; }
+}
+
+// Non touch devices
+.no-touch {
+
+	.text-left-no-touch { text-align: left; }
+	.text-right-no-touch { text-align: right; }
+	.text-center-no-touch { text-align: center; }
+}
+
+// Touch devices
+.touch {
+
+	.text-left-touch { text-align: left; }
+	.text-right-touch { text-align: right; }
+	.text-center-touch { text-align: center; }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Font smoothing
+.bs3-designer-mixin-font-smoothing(@type: antialiased) {
+	-webkit-font-smoothing: @type;
+	-moz-font-smoothing: @type;
+	-ms-font-smoothing: @type;
+	-o-font-smoothing: @type;
+	font-smoothing: @type;
+}
+
+// Line height
+.bs3-designer-mixin-line-height(@font-size) {
+	line-height: floor((@font-size * @line-height-base));
+}

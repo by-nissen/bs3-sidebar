@@ -1,0 +1,104 @@
+// |--------------------------------------------------------------------------
+// | Exposed
+// |--------------------------------------------------------------------------
+// |
+// | This file contains exposures for the following:
+// | - exposed variables
+// | - mixins
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Line height
+@headings-h1-line-height: 	@bs3-designer-headings-h1-line-height;
+@headings-h2-line-height: 	@bs3-designer-headings-h2-line-height;
+@headings-h3-line-height:	@bs3-designer-headings-h3-line-height;
+@headings-h4-line-height: 	@bs3-designer-headings-h4-line-height;
+@headings-h5-line-height: 	@bs3-designer-headings-h5-line-height;
+@headings-h6-line-height: 	@bs3-designer-headings-h6-line-height;
+
+@line-height-small: 	@bs3-designer-line-height-small;
+@line-height-large: 	@bs3-designer-line-height-large;
+
+// Font weight
+@headings-font-weight-light: 		@bs3-designer-headings-font-weight-light;
+@headings-font-weight-semi-light:	@bs3-designer-headings-font-weight-semi-light;
+@headings-font-weight:				@bs3-designer-headings-font-weight;
+@headings-font-weight-semi-bold:	@bs3-designer-headings-font-weight-semi-bold;
+@headings-font-weight-bold:			@bs3-designer-headings-font-weight-bold;
+
+@font-weight-light: 		@bs3-designer-font-weight-light;
+@font-weight-semi-light: 	@bs3-designer-font-weight-semi-light;
+@font-weight: 				@bs3-designer-font-weight;
+@font-weight-semi-bold: 	@bs3-designer-font-weight-semi-bold;
+@font-weight-bold: 			@bs3-designer-font-weight-bold;
+
+// Letter spacing
+@headings-h1-letter-spacing: 	@bs3-designer-headings-h1-letter-spacing;
+@headings-h2-letter-spacing: 	@bs3-designer-headings-h2-letter-spacing;
+@headings-h3-letter-spacing: 	@bs3-designer-headings-h3-letter-spacing;
+@headings-h4-letter-spacing: 	@bs3-designer-headings-h4-letter-spacing;
+@headings-h5-letter-spacing: 	@bs3-designer-headings-h5-letter-spacing;
+@headings-h6-letter-spacing: 	@bs3-designer-headings-h6-letter-spacing;
+
+// Font size (responsiveness)
+@headings-font-size-xs: @bs3-designer-headings-font-size-xs;
+@headings-font-size-sm: @bs3-designer-headings-font-size-sm;
+@headings-font-size-md: @bs3-designer-headings-font-size-md;
+@headings-font-size-lg: @bs3-designer-headings-font-size-lg;
+
+// Transition time
+@transition-time-short:	@bs3-designer-transition-time-short;
+@transition-time:       @bs3-designer-transition-time;
+@transition-time-long:  @bs3-designer-transition-time-long;
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Transform style
+.transform-style(@style) {
+	-webkit-transform-style: @style;
+	-ms-transform-style: @style;
+	transform-style: @style;
+}
+
+// Translate Y
+.translateY(@y) {
+	.bs3-designer-mixin-translateY(@y);
+};
+
+// Translate X
+.translateX(@x) {
+	.bs3-designer-mixin-translateX(@x);
+};
+
+// Background size
+.background-size(@size) {
+	.bs3-designer-mixin-background-size(@size);
+}
+
+// 3D button
+.btn-3d(@background-color; @box-shadow-color: darken(@background-color, 12%);) {
+	@box-shadow-color-hover: darken(@box-shadow-color, 14%);
+	@box-shadow-color-active: darken(@box-shadow-color, 16%);
+
+	.box-shadow(~'0 2px 0 @{box-shadow-color}');
+
+	// Hover state
+	&:hover {
+		.box-shadow(~'0 2px 0 @{box-shadow-color-hover}');
+	}
+
+	// Active state
+	&:active {
+		.box-shadow(~'0 2px 0 @{box-shadow-color-active}');
+	}
+}
+
+// Line height
+.line-height(@font-size) {
+	.bs3-designer-mixin-line-height(@font-size);
+}

@@ -1,0 +1,64 @@
+// |--------------------------------------------------------------------------
+// | Variables
+// |--------------------------------------------------------------------------
+// |
+// | This file contains exposures for the following:
+// | - variables
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Brand
+@brand-secondary:	#7db921;
+@brand-tertiary:    #fdb714;
+@brand-quarternary: #2d3e52;
+
+// Social
+@social-link-color-facebook:    #3b5998;
+@social-link-color-twitter:     #55acee;
+@social-link-color-instagram:   #3f729b;
+@social-link-color-linkedin:    #0976b4;
+@social-link-color-pinterest:   #cc2127;
+@social-link-color-vimeo: 	    #1ab7ea;
+@social-link-color-youtube:     #e52d27;
+
+// States
+@state-primary-text:	#ffffff;
+@state-primary-bg:      @brand-primary;
+
+@state-secondary-text:  #fff;
+@state-secondary-bg:    @brand-secondary;
+
+@state-tertiary-text:   #fff;
+@state-tertiary-bg:     @brand-tertiary;
+
+@state-quarternary-text:   #fff;
+@state-quarternary-bg:     @brand-quarternary;
+
+// Button
+@btn-secondary-color:   #fff;
+@btn-secondary-bg:      @brand-secondary;
+@btn-secondary-border:  darken(@btn-secondary-bg, 5%);
+
+@btn-tertiary-color:    #fff;
+@btn-tertiary-bg:       @brand-tertiary;
+@btn-tertiary-border:   darken(@btn-tertiary-bg, 5%);
+
+@btn-quarternary-color:    #fff;
+@btn-quarternary-bg:       @brand-quarternary;
+@btn-quarternary-border:   darken(@btn-quarternary-bg, 5%);
+
+// Paths
+@path-image: 	"../img/";
+
+// Media queries
+@media-query-mobile:            	~"screen";
+@media-query-mobile-only:           ~"screen and (max-width: @{screen-xs-max})";
+@media-query-tablet:            	~"screen and (min-width: @{screen-sm-min})";
+@media-query-tablet-only:           ~"screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@media-query-desktop:           	~"screen and (min-width: @{screen-md-min})";
+@media-query-desktop-only:          ~"screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@media-query-large-desktop:     	~"screen and (min-width: @{screen-lg-min})";
+@media-query-large-desktop-only:    @media-query-large-desktop;

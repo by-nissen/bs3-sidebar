@@ -1,0 +1,87 @@
+// |--------------------------------------------------------------------------
+// | Button
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .btn
+// | - .btn-secondary
+// | - .btn-tertiary
+// | - .btn-faceless
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.btn {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, .15);
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+// Color
+.btn-secondary {
+	.button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+}
+.btn-tertiary {
+	.button-variant(@btn-tertiary-color; @btn-tertiary-bg; @btn-tertiary-border);
+}
+.btn-quarternary {
+	.button-variant(@btn-quarternary-color; @btn-quarternary-bg; @btn-quarternary-border);
+}
+
+// Faceless
+.btn-faceless {
+
+	&,
+	&:hover,
+	&:focus
+	&.focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		color: @text-color;
+		background-color: transparent;
+		.box-shadow(none);
+
+		.icon {
+			color: @text-color;
+		}
+	}
+}
+
+// Icon
+.btn {
+
+	.icon {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		color: #fff;
+		color: rgba(255, 255, 255, .5);
+		vertical-align: middle;
+
+		+ .icon {
+			margin-left: 5px;
+		}
+	}
+}
+
+// Stacked
+.btn + .btn {
+	margin-left: 5px;
+}
+.btn-block + .btn-block {
+	margin-left: 0;
+}

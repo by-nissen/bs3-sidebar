@@ -1,0 +1,50 @@
+// |--------------------------------------------------------------------------
+// | Badge
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .badge-white
+// | - .badge-dark
+// | - .badge-primary
+// | - .badge-secondary
+// | - .badge-tertiary
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Color
+.badge-white {
+	color: @text-color;
+	background-color: #fff;
+}
+.badge-dark {
+	color: #fff;
+	background-color: @gray-dark;
+}
+.badge-primary {
+	color: @state-primary-text;
+	background-color: @state-primary-bg;
+}
+.badge-secondary {
+	color: @state-secondary-text;
+	background-color: @state-secondary-bg;
+}
+.badge-tertiary {
+	color: @state-tertiary-text;
+	background-color: @state-tertiary-bg;
+}
+.badge-quarternary {
+	color: @state-quarternary-text;
+	background-color: @state-quarternary-bg;
+}
+
+// Stacked
+.badge + .badge {
+	margin-left: 5px;
+}

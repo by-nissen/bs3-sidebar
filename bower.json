@@ -1,0 +1,21 @@
+{
+    "name": "bs3-sidebar",
+    "description": "Beautiful off-canvas sidebar for Bootstrap v. 3.x.",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "~2.*",
+        "jquery-ui": "~1.*",
+        "bootstrap": "~3.*",
+        "fontawesome": "~4.*",
+        "respond": "~1.*",
+        "html5shiv": "~3.*",
+        "fastclick": "~1.*",
+        "bs3-designer": "~0.*"
+    },
+    "ignore": [
+        "bower_components"
+    ],
+    "authors": [
+        "Morten Nissen <mail@hjemmesidekongen.dk> (http://hjemmesidekongen.dk)"
+    ]
+}

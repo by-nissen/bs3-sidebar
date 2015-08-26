@@ -1,0 +1,110 @@
+// |--------------------------------------------------------------------------
+// | Icon
+// |--------------------------------------------------------------------------
+// |
+// | This file contains the following:
+// |
+// | Sizing
+// | - .icon-xxs
+// | - .icon-xs
+// | - .icon-s
+// | - .icon
+// | - .icon-l
+// | - .icon-xl
+// | - .icon-xxl
+// |
+// | Animation
+// | - .icon-spin
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Sizing
+@bs3-designer-icon-font-size-xxs:	floor((@bs3-designer-icon-font-size * 0.85));
+@bs3-designer-icon-font-size-xs: 	floor((@bs3-designer-icon-font-size * 0.90));
+@bs3-designer-icon-font-size-s:  	floor((@bs3-designer-icon-font-size * 0.95));
+@bs3-designer-icon-font-size:    	@font-size-base;
+@bs3-designer-icon-font-size-l:  	floor((@bs3-designer-icon-font-size * 1.25));
+@bs3-designer-icon-font-size-xl: 	floor((@bs3-designer-icon-font-size * 1.5));
+@bs3-designer-icon-font-size-xxl:	floor((@bs3-designer-icon-font-size * 2.5));
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Sizing
+.icon {
+
+	&.icon-xxs {
+		font-size: @bs3-designer-icon-font-size-xxs;
+		line-height: @bs3-designer-icon-font-size-xxs;
+	}
+	&.icon-xs {
+		font-size: @bs3-designer-icon-font-size-xs;
+		line-height: @bs3-designer-icon-font-size-xs;
+	}
+	&.icon-s {
+		font-size: @bs3-designer-icon-font-size-s;
+		line-height: @bs3-designer-icon-font-size-s;
+	}
+	& {
+		font-size: @bs3-designer-icon-font-size;
+		line-height: @bs3-designer-icon-font-size;
+	}
+	&.icon-l {
+		font-size: @bs3-designer-icon-font-size-l;
+		line-height: @bs3-designer-icon-font-size-l;
+	}
+	&.icon-xl {
+		font-size: @bs3-designer-icon-font-size-xl;
+		line-height: @bs3-designer-icon-font-size-xl;
+	}
+	&.icon-xxl {
+		font-size: @bs3-designer-icon-font-size-xxl;
+		line-height: @bs3-designer-icon-font-size-xxl;
+	}
+}
+
+// Animation
+.icon {
+
+	&.icon-spin {
+		-webkit-animation: icon-spin 2s infinite linear;
+		animation: icon-spin 2s infinite linear;
+
+		&.fa {
+
+			&:before {
+				content: "\f1ce";
+			}
+		}
+	}
+}
+
+// --------------------------------------------------
+// Transitions
+// --------------------------------------------------
+
+// Spin
+@-webkit-keyframes icon-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+@keyframes icon-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}

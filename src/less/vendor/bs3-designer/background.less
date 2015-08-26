@@ -1,0 +1,102 @@
+// |--------------------------------------------------------------------------
+// | Background
+// |--------------------------------------------------------------------------
+// |
+// | This file contains the following:
+// |
+// | - .background-color-primary
+// | - .background-color-secondary
+// | - .background-color-tertiary
+// |
+// | - .background-overlay-dark
+// | - .background-overlay-primary
+// | - .background-overlay-secondary
+// | - .background-overlay-tertiary
+// |
+// | - .background-cover
+// |
+// | - .background-parallax
+// |
+// |
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Colouring
+.background-color-primary { background-color: @brand-primary; }
+.background-color-secondary { background-color: @brand-secondary; }
+.background-color-tertiary { background-color: @brand-tertiary; }
+
+// Overlay
+.background-overlay-dark {
+	background-color: rgb(37, 32, 31);
+	background-color: rgba(37, 32, 31, .8);
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.background-overlay-light {
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, .8);
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.background-overlay-primary {
+	background-color: @brand-primary;
+	background-color: fade(@brand-primary, 80%);
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.background-overlay-secondary {
+	background-color: @brand-secondary;
+	background-color: fade(@brand-secondary, 80%);
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.background-overlay-tertiary {
+	background-color: @brand-tertiary;
+	background-color: fade(@brand-tertiary, 80%);
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+// Background cover
+.background-cover {
+	.bs3-designer-mixin-background-size(cover);
+	overflow: hidden;
+}
+
+// Background parallax
+.background-parallax {
+	background-repeat: no-repeat;
+	.bs3-designer-mixin-background-size(cover);
+	overflow: hidden;
+	background-position: center center;
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Background size
+.bs3-designer-mixin-background-size(@size) {
+	-webkit-background-size: @size;
+	-moz-background-size: @size;
+	-o-background-size: @size;
+	background-size: @size;
+}

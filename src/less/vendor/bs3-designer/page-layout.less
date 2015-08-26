@@ -1,0 +1,54 @@
+// |--------------------------------------------------------------------------
+// | Page layout
+// |--------------------------------------------------------------------------
+// |
+// | Makes it a breeze to alter text layouts via HTML on the website.
+// | - .footer-attach
+// |
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+html,
+body,
+.outer-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .outer-wrapper,
+  .inner-wrapper,
+  .content,
+  .footer {
+    position: relative;
+  }
+
+  .inner-wrapper {
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .inner-wrapper {
+    background-color: @body-bg;
+  }
+}
+
+.footer-attached {
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+}

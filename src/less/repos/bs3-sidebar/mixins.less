@@ -1,0 +1,8 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Link indentation
+.bs3-sidebar-link-indentation(@indentation-level: 1;) {
+    padding-left: floor((@bs3-sidebar-nav-link-icon-max-width + (@bs3-sidebar-nav-link-indentation * @indentation-level)));
+}

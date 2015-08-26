@@ -1,0 +1,511 @@
+// |--------------------------------------------------------------------------
+// | Margin and padding
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .margin-top
+// | - .padding-top
+// | - .margin-bottom
+// | - .padding-bottom
+// | - .margin-left
+// | - .padding-left
+// | - .margin-right
+// | - .padding-right
+// | - .margin-x
+// | - .padding-x
+// | - .margin-y
+// | - .padding-y
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Mobile
+@bs3-designer-margin-and-padding-xs-xxs:	2px;
+@bs3-designer-margin-and-padding-xs-xs:		5px;
+@bs3-designer-margin-and-padding-xs-s:		8px;
+@bs3-designer-margin-and-padding-xs-m:		12px;
+@bs3-designer-margin-and-padding-xs-l:		16px;
+@bs3-designer-margin-and-padding-xs-xl:		24px;
+@bs3-designer-margin-and-padding-xs-xxl:	32px;
+
+// Tablet
+@bs3-designer-margin-and-padding-sm-xxs:	3px;
+@bs3-designer-margin-and-padding-sm-xs:		6px;
+@bs3-designer-margin-and-padding-sm-s:		10px;
+@bs3-designer-margin-and-padding-sm-m:		15px;
+@bs3-designer-margin-and-padding-sm-l:		22px;
+@bs3-designer-margin-and-padding-sm-xl:		30px;
+@bs3-designer-margin-and-padding-sm-xxl:	40px;
+
+// Desktop
+@bs3-designer-margin-and-padding-md-xxs:	5px;
+@bs3-designer-margin-and-padding-md-xs:		10px;
+@bs3-designer-margin-and-padding-md-s:		15px;
+@bs3-designer-margin-and-padding-md-m:		25px;
+@bs3-designer-margin-and-padding-md-l:		40px;
+@bs3-designer-margin-and-padding-md-xl:		60px;
+@bs3-designer-margin-and-padding-md-xxl:	90px;
+
+// Large desktop
+@bs3-designer-margin-and-padding-lg-xxs:	5px;
+@bs3-designer-margin-and-padding-lg-xs:		10px;
+@bs3-designer-margin-and-padding-lg-s:		15px;
+@bs3-designer-margin-and-padding-lg-m:		25px;
+@bs3-designer-margin-and-padding-lg-l:		40px;
+@bs3-designer-margin-and-padding-lg-xl:		60px;
+@bs3-designer-margin-and-padding-lg-xxl:	90px;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Top
+@media @media-query-mobile-only {
+
+	// Margin
+	.margin-top-xxs { margin-top: @bs3-designer-margin-and-padding-xs-xxs; }
+	.margin-top-xs { margin-top: @bs3-designer-margin-and-padding-xs-xs; }
+	.margin-top-s { margin-top: @bs3-designer-margin-and-padding-xs-s; }
+	.margin-top { margin-top: @bs3-designer-margin-and-padding-xs-m; }
+	.margin-top-l { margin-top: @bs3-designer-margin-and-padding-xs-l; }
+	.margin-top-xl { margin-top: @bs3-designer-margin-and-padding-xs-xl; }
+	.margin-top-xxl { margin-top: @bs3-designer-margin-and-padding-xs-xxl; }
+
+	// Padding
+	.padding-top-xxs { padding-top: @bs3-designer-margin-and-padding-xs-xxs; }
+	.padding-top-xs { padding-top: @bs3-designer-margin-and-padding-xs-xs; }
+	.padding-top-s { padding-top: @bs3-designer-margin-and-padding-xs-s; }
+	.padding-top { padding-top: @bs3-designer-margin-and-padding-xs-m; }
+	.padding-top-l { padding-top: @bs3-designer-margin-and-padding-xs-l; }
+	.padding-top-xl { padding-top: @bs3-designer-margin-and-padding-xs-xl; }
+	.padding-top-xxl { padding-top: @bs3-designer-margin-and-padding-xs-xxl; }
+}
+@media @media-query-tablet-only {
+
+	// Margin
+	.margin-top-xxs { margin-top: @bs3-designer-margin-and-padding-sm-xxs; }
+	.margin-top-xs { margin-top: @bs3-designer-margin-and-padding-sm-xs; }
+	.margin-top-s { margin-top: @bs3-designer-margin-and-padding-sm-s; }
+	.margin-top { margin-top: @bs3-designer-margin-and-padding-sm-m; }
+	.margin-top-l { margin-top: @bs3-designer-margin-and-padding-sm-l; }
+	.margin-top-xl { margin-top: @bs3-designer-margin-and-padding-sm-xl; }
+	.margin-top-xxl { margin-top: @bs3-designer-margin-and-padding-sm-xxl; }
+
+	// Padding
+	.padding-top-xxs { padding-top: @bs3-designer-margin-and-padding-sm-xxs; }
+	.padding-top-xs { padding-top: @bs3-designer-margin-and-padding-sm-xs; }
+	.padding-top-s { padding-top: @bs3-designer-margin-and-padding-sm-s; }
+	.padding-top { padding-top: @bs3-designer-margin-and-padding-sm-m; }
+	.padding-top-l { padding-top: @bs3-designer-margin-and-padding-sm-l; }
+	.padding-top-xl { padding-top: @bs3-designer-margin-and-padding-sm-xl; }
+	.padding-top-xxl { padding-top: @bs3-designer-margin-and-padding-sm-xxl; }
+}
+@media @media-query-desktop-only {
+
+	.margin-top-xxs { margin-top: @bs3-designer-margin-and-padding-md-xxs; }
+	.margin-top-xs { margin-top: @bs3-designer-margin-and-padding-md-xs; }
+	.margin-top-s { margin-top: @bs3-designer-margin-and-padding-md-s; }
+	.margin-top { margin-top: @bs3-designer-margin-and-padding-md-m; }
+	.margin-top-l { margin-top: @bs3-designer-margin-and-padding-md-l; }
+	.margin-top-xl { margin-top: @bs3-designer-margin-and-padding-md-xl; }
+	.margin-top-xxl { margin-top: @bs3-designer-margin-and-padding-md-xxl; }
+
+	.padding-top-xxs { padding-top: @bs3-designer-margin-and-padding-md-xxs; }
+	.padding-top-xs { padding-top: @bs3-designer-margin-and-padding-md-xs; }
+	.padding-top-s { padding-top: @bs3-designer-margin-and-padding-md-s; }
+	.padding-top { padding-top: @bs3-designer-margin-and-padding-md-m; }
+	.padding-top-l { padding-top: @bs3-designer-margin-and-padding-md-l; }
+	.padding-top-xl { padding-top: @bs3-designer-margin-and-padding-md-xl; }
+	.padding-top-xxl { padding-top: @bs3-designer-margin-and-padding-md-xxl; }
+}
+@media @media-query-large-desktop-only {
+
+	.margin-top-xxs { margin-top: @bs3-designer-margin-and-padding-lg-xxs; }
+	.margin-top-xs { margin-top: @bs3-designer-margin-and-padding-lg-xs; }
+	.margin-top-s { margin-top: @bs3-designer-margin-and-padding-lg-s; }
+	.margin-top { margin-top: @bs3-designer-margin-and-padding-lg-m; }
+	.margin-top-l { margin-top: @bs3-designer-margin-and-padding-lg-l; }
+	.margin-top-xl { margin-top: @bs3-designer-margin-and-padding-lg-xl; }
+	.margin-top-xxl { margin-top: @bs3-designer-margin-and-padding-lg-xxl; }
+
+	.padding-top-xxs { padding-top: @bs3-designer-margin-and-padding-lg-xxs; }
+	.padding-top-xs { padding-top: @bs3-designer-margin-and-padding-lg-xs; }
+	.padding-top-s { padding-top: @bs3-designer-margin-and-padding-lg-s; }
+	.padding-top { padding-top: @bs3-designer-margin-and-padding-lg-m; }
+	.padding-top-l { padding-top: @bs3-designer-margin-and-padding-lg-l; }
+	.padding-top-xl { padding-top: @bs3-designer-margin-and-padding-lg-xl; }
+	.padding-top-xxl { padding-top: @bs3-designer-margin-and-padding-lg-xxl; }
+}
+
+// Bottom
+@media @media-query-mobile-only {
+
+	.margin-bottom-xxs { margin-bottom: @bs3-designer-margin-and-padding-xs-xxs; }
+	.margin-bottom-xs { margin-bottom: @bs3-designer-margin-and-padding-xs-xs; }
+	.margin-bottom-s { margin-bottom: @bs3-designer-margin-and-padding-xs-s; }
+	.margin-bottom { margin-bottom: @bs3-designer-margin-and-padding-xs-m; }
+	.margin-bottom-l { margin-bottom: @bs3-designer-margin-and-padding-xs-l; }
+	.margin-bottom-xl { margin-bottom: @bs3-designer-margin-and-padding-xs-xl; }
+	.margin-bottom-xxl { margin-bottom: @bs3-designer-margin-and-padding-xs-xxl; }
+
+	.padding-bottom-xxs { padding-bottom: @bs3-designer-margin-and-padding-xs-xxs; }
+	.padding-bottom-xs { padding-bottom: @bs3-designer-margin-and-padding-xs-xs; }
+	.padding-bottom-s { padding-bottom: @bs3-designer-margin-and-padding-xs-s; }
+	.padding-bottom { padding-bottom: @bs3-designer-margin-and-padding-xs-m; }
+	.padding-bottom-l { padding-bottom: @bs3-designer-margin-and-padding-xs-l; }
+	.padding-bottom-xl { padding-bottom: @bs3-designer-margin-and-padding-xs-xl; }
+	.padding-bottom-xxl { padding-bottom: @bs3-designer-margin-and-padding-xs-xxl; }
+
+}
+@media @media-query-tablet-only {
+
+	.margin-bottom-xxs { margin-bottom: @bs3-designer-margin-and-padding-sm-xxs; }
+	.margin-bottom-xs { margin-bottom: @bs3-designer-margin-and-padding-sm-xs; }
+	.margin-bottom-s { margin-bottom: @bs3-designer-margin-and-padding-sm-s; }
+	.margin-bottom { margin-bottom: @bs3-designer-margin-and-padding-sm-m; }
+	.margin-bottom-l { margin-bottom: @bs3-designer-margin-and-padding-sm-l; }
+	.margin-bottom-xl { margin-bottom: @bs3-designer-margin-and-padding-sm-xl; }
+	.margin-bottom-xxl { margin-bottom: @bs3-designer-margin-and-padding-sm-xxl; }
+
+	.padding-bottom-xxs { padding-bottom: @bs3-designer-margin-and-padding-sm-xxs; }
+	.padding-bottom-xs { padding-bottom: @bs3-designer-margin-and-padding-sm-xs; }
+	.padding-bottom-s { padding-bottom: @bs3-designer-margin-and-padding-sm-s; }
+	.padding-bottom { padding-bottom: @bs3-designer-margin-and-padding-sm-m; }
+	.padding-bottom-l { padding-bottom: @bs3-designer-margin-and-padding-sm-l; }
+	.padding-bottom-xl { padding-bottom: @bs3-designer-margin-and-padding-sm-xl; }
+	.padding-bottom-xxl { padding-bottom: @bs3-designer-margin-and-padding-sm-xxl; }
+}
+@media @media-query-desktop-only {
+
+	.margin-bottom-xxs { margin-bottom: @bs3-designer-margin-and-padding-md-xxs; }
+	.margin-bottom-xs { margin-bottom: @bs3-designer-margin-and-padding-md-xs; }
+	.margin-bottom-s { margin-bottom: @bs3-designer-margin-and-padding-md-s; }
+	.margin-bottom { margin-bottom: @bs3-designer-margin-and-padding-md-m; }
+	.margin-bottom-l { margin-bottom: @bs3-designer-margin-and-padding-md-l; }
+	.margin-bottom-xl { margin-bottom: @bs3-designer-margin-and-padding-md-xl; }
+	.margin-bottom-xxl { margin-bottom: @bs3-designer-margin-and-padding-md-xxl; }
+
+	.padding-bottom-xxs { padding-bottom: @bs3-designer-margin-and-padding-md-xxs; }
+	.padding-bottom-xs { padding-bottom: @bs3-designer-margin-and-padding-md-xs; }
+	.padding-bottom-s { padding-bottom: @bs3-designer-margin-and-padding-md-s; }
+	.padding-bottom { padding-bottom: @bs3-designer-margin-and-padding-md-m; }
+	.padding-bottom-l { padding-bottom: @bs3-designer-margin-and-padding-md-l; }
+	.padding-bottom-xl { padding-bottom: @bs3-designer-margin-and-padding-md-xl; }
+	.padding-bottom-xxl { padding-bottom: @bs3-designer-margin-and-padding-md-xxl; }
+}
+@media @media-query-large-desktop-only {
+
+	.margin-bottom-xxs { margin-bottom: @bs3-designer-margin-and-padding-lg-xxs; }
+	.margin-bottom-xs { margin-bottom: @bs3-designer-margin-and-padding-lg-xs; }
+	.margin-bottom-s { margin-bottom: @bs3-designer-margin-and-padding-lg-s; }
+	.margin-bottom { margin-bottom: @bs3-designer-margin-and-padding-lg-m; }
+	.margin-bottom-l { margin-bottom: @bs3-designer-margin-and-padding-lg-l; }
+	.margin-bottom-xl { margin-bottom: @bs3-designer-margin-and-padding-lg-xl; }
+	.margin-bottom-xxl { margin-bottom: @bs3-designer-margin-and-padding-lg-xxl; }
+
+	.padding-bottom-xxs { padding-bottom: @bs3-designer-margin-and-padding-lg-xxs; }
+	.padding-bottom-xs { padding-bottom: @bs3-designer-margin-and-padding-lg-xs; }
+	.padding-bottom-s { padding-bottom: @bs3-designer-margin-and-padding-lg-s; }
+	.padding-bottom { padding-bottom: @bs3-designer-margin-and-padding-lg-m; }
+	.padding-bottom-l { padding-bottom: @bs3-designer-margin-and-padding-lg-l; }
+	.padding-bottom-xl { padding-bottom: @bs3-designer-margin-and-padding-lg-xl; }
+	.padding-bottom-xxl { padding-bottom: @bs3-designer-margin-and-padding-lg-xxl; }
+}
+
+// Left
+@media @media-query-mobile-only {
+
+	.margin-left-xxs { margin-left: @bs3-designer-margin-and-padding-xs-xxs; }
+	.margin-left-xs { margin-left: @bs3-designer-margin-and-padding-xs-xs; }
+	.margin-left-s { margin-left: @bs3-designer-margin-and-padding-xs-s; }
+	.margin-left { margin-left: @bs3-designer-margin-and-padding-xs-m; }
+	.margin-left-l { margin-left: @bs3-designer-margin-and-padding-xs-l; }
+	.margin-left-xl { margin-left: @bs3-designer-margin-and-padding-xs-xl; }
+	.margin-left-xxl { margin-left: @bs3-designer-margin-and-padding-xs-xxl; }
+
+	.padding-left-xxs { padding-left: @bs3-designer-margin-and-padding-xs-xxs; }
+	.padding-left-xs { padding-left: @bs3-designer-margin-and-padding-xs-xs; }
+	.padding-left-s { padding-left: @bs3-designer-margin-and-padding-xs-s; }
+	.padding-left { padding-left: @bs3-designer-margin-and-padding-xs-m; }
+	.padding-left-l { padding-left: @bs3-designer-margin-and-padding-xs-l; }
+	.padding-left-xl { padding-left: @bs3-designer-margin-and-padding-xs-xl; }
+	.padding-left-xxl { padding-left: @bs3-designer-margin-and-padding-xs-xxl; }
+}
+@media @media-query-tablet-only {
+
+	.margin-left-xxs { margin-left: @bs3-designer-margin-and-padding-sm-xxs; }
+	.margin-left-xs { margin-left: @bs3-designer-margin-and-padding-sm-xs; }
+	.margin-left-s { margin-left: @bs3-designer-margin-and-padding-sm-s; }
+	.margin-left { margin-left: @bs3-designer-margin-and-padding-sm-m; }
+	.margin-left-l { margin-left: @bs3-designer-margin-and-padding-sm-l; }
+	.margin-left-xl { margin-left: @bs3-designer-margin-and-padding-sm-xl; }
+	.margin-left-xxl { margin-left: @bs3-designer-margin-and-padding-sm-xxl; }
+
+	.padding-left-xxs { padding-left: @bs3-designer-margin-and-padding-sm-xxs; }
+	.padding-left-xs { padding-left: @bs3-designer-margin-and-padding-sm-xs; }
+	.padding-left-s { padding-left: @bs3-designer-margin-and-padding-sm-s; }
+	.padding-left { padding-left: @bs3-designer-margin-and-padding-sm-m; }
+	.padding-left-l { padding-left: @bs3-designer-margin-and-padding-sm-l; }
+	.padding-left-xl { padding-left: @bs3-designer-margin-and-padding-sm-xl; }
+	.padding-left-xxl { padding-left: @bs3-designer-margin-and-padding-sm-xxl; }
+}
+@media @media-query-desktop-only {
+
+	.margin-left-xxs { margin-left: @bs3-designer-margin-and-padding-md-xxs; }
+	.margin-left-xs { margin-left: @bs3-designer-margin-and-padding-md-xs; }
+	.margin-left-s { margin-left: @bs3-designer-margin-and-padding-md-s; }
+	.margin-left { margin-left: @bs3-designer-margin-and-padding-md-m; }
+	.margin-left-l { margin-left: @bs3-designer-margin-and-padding-md-l; }
+	.margin-left-xl { margin-left: @bs3-designer-margin-and-padding-md-xl; }
+	.margin-left-xxl { margin-left: @bs3-designer-margin-and-padding-md-xxl; }
+
+	.padding-left-xxs { padding-left: @bs3-designer-margin-and-padding-md-xxs; }
+	.padding-left-xs { padding-left: @bs3-designer-margin-and-padding-md-xs; }
+	.padding-left-s { padding-left: @bs3-designer-margin-and-padding-md-s; }
+	.padding-left { padding-left: @bs3-designer-margin-and-padding-md-m; }
+	.padding-left-l { padding-left: @bs3-designer-margin-and-padding-md-l; }
+	.padding-left-xl { padding-left: @bs3-designer-margin-and-padding-md-xl; }
+	.padding-left-xxl { padding-left: @bs3-designer-margin-and-padding-md-xxl; }
+}
+@media @media-query-large-desktop-only {
+
+	.margin-left-xxs { margin-left: @bs3-designer-margin-and-padding-lg-xxs; }
+	.margin-left-xs { margin-left: @bs3-designer-margin-and-padding-lg-xs; }
+	.margin-left-s { margin-left: @bs3-designer-margin-and-padding-lg-s; }
+	.margin-left { margin-left: @bs3-designer-margin-and-padding-lg-m; }
+	.margin-left-l { margin-left: @bs3-designer-margin-and-padding-lg-l; }
+	.margin-left-xl { margin-left: @bs3-designer-margin-and-padding-lg-xl; }
+	.margin-left-xxl { margin-left: @bs3-designer-margin-and-padding-lg-xxl; }
+
+	.padding-left-xxs { padding-left: @bs3-designer-margin-and-padding-lg-xxs; }
+	.padding-left-xs { padding-left: @bs3-designer-margin-and-padding-lg-xs; }
+	.padding-left-s { padding-left: @bs3-designer-margin-and-padding-lg-s; }
+	.padding-left { padding-left: @bs3-designer-margin-and-padding-lg-m; }
+	.padding-left-l { padding-left: @bs3-designer-margin-and-padding-lg-l; }
+	.padding-left-xl { padding-left: @bs3-designer-margin-and-padding-lg-xl; }
+	.padding-left-xxl { padding-left: @bs3-designer-margin-and-padding-lg-xxl; }
+}
+
+// Right
+@media @media-query-mobile-only {
+
+	.margin-right-xxs { margin-right: @bs3-designer-margin-and-padding-xs-xxs; }
+	.margin-right-xs { margin-right: @bs3-designer-margin-and-padding-xs-xs; }
+	.margin-right-s { margin-right: @bs3-designer-margin-and-padding-xs-s; }
+	.margin-right { margin-right: @bs3-designer-margin-and-padding-xs-m; }
+	.margin-right-l { margin-right: @bs3-designer-margin-and-padding-xs-l; }
+	.margin-right-xl { margin-right: @bs3-designer-margin-and-padding-xs-xl; }
+	.margin-right-xxl { margin-right: @bs3-designer-margin-and-padding-xs-xxl; }
+
+	.padding-right-xxs { padding-right: @bs3-designer-margin-and-padding-xs-xxs; }
+	.padding-right-xs { padding-right: @bs3-designer-margin-and-padding-xs-xs; }
+	.padding-right-s { padding-right: @bs3-designer-margin-and-padding-xs-s; }
+	.padding-right { padding-right: @bs3-designer-margin-and-padding-xs-m; }
+	.padding-right-l { padding-right: @bs3-designer-margin-and-padding-xs-l; }
+	.padding-right-xl { padding-right: @bs3-designer-margin-and-padding-xs-xl; }
+	.padding-right-xxl { padding-right: @bs3-designer-margin-and-padding-xs-xxl; }
+}
+@media @media-query-tablet-only {
+
+	.margin-right-xxs { margin-right: @bs3-designer-margin-and-padding-sm-xxs; }
+	.margin-right-xs { margin-right: @bs3-designer-margin-and-padding-sm-xs; }
+	.margin-right-s { margin-right: @bs3-designer-margin-and-padding-sm-s; }
+	.margin-right { margin-right: @bs3-designer-margin-and-padding-sm-m; }
+	.margin-right-l { margin-right: @bs3-designer-margin-and-padding-sm-l; }
+	.margin-right-xl { margin-right: @bs3-designer-margin-and-padding-sm-xl; }
+	.margin-right-xxl { margin-right: @bs3-designer-margin-and-padding-sm-xxl; }
+
+	.padding-right-xxs { padding-right: @bs3-designer-margin-and-padding-sm-xxs; }
+	.padding-right-xs { padding-right: @bs3-designer-margin-and-padding-sm-xs; }
+	.padding-right-s { padding-right: @bs3-designer-margin-and-padding-sm-s; }
+	.padding-right { padding-right: @bs3-designer-margin-and-padding-sm-m; }
+	.padding-right-l { padding-right: @bs3-designer-margin-and-padding-sm-l; }
+	.padding-right-xl { padding-right: @bs3-designer-margin-and-padding-sm-xl; }
+	.padding-right-xxl { padding-right: @bs3-designer-margin-and-padding-sm-xxl; }
+}
+@media @media-query-desktop-only {
+
+	.margin-right-xxs { margin-right: @bs3-designer-margin-and-padding-md-xxs; }
+	.margin-right-xs { margin-right: @bs3-designer-margin-and-padding-md-xs; }
+	.margin-right-s { margin-right: @bs3-designer-margin-and-padding-md-s; }
+	.margin-right { margin-right: @bs3-designer-margin-and-padding-md-m; }
+	.margin-right-l { margin-right: @bs3-designer-margin-and-padding-md-l; }
+	.margin-right-xl { margin-right: @bs3-designer-margin-and-padding-md-xl; }
+	.margin-right-xxl { margin-right: @bs3-designer-margin-and-padding-md-xxl; }
+
+	.padding-right-xxs { padding-right: @bs3-designer-margin-and-padding-md-xxs; }
+	.padding-right-xs { padding-right: @bs3-designer-margin-and-padding-md-xs; }
+	.padding-right-s { padding-right: @bs3-designer-margin-and-padding-md-s; }
+	.padding-right { padding-right: @bs3-designer-margin-and-padding-md-m; }
+	.padding-right-l { padding-right: @bs3-designer-margin-and-padding-md-l; }
+	.padding-right-xl { padding-right: @bs3-designer-margin-and-padding-md-xl; }
+	.padding-right-xxl { padding-right: @bs3-designer-margin-and-padding-md-xxl; }
+}
+@media @media-query-large-desktop-only {
+
+	.margin-right-xxs { margin-right: @bs3-designer-margin-and-padding-lg-xxs; }
+	.margin-right-xs { margin-right: @bs3-designer-margin-and-padding-lg-xs; }
+	.margin-right-s { margin-right: @bs3-designer-margin-and-padding-lg-s; }
+	.margin-right { margin-right: @bs3-designer-margin-and-padding-lg-m; }
+	.margin-right-l { margin-right: @bs3-designer-margin-and-padding-lg-l; }
+	.margin-right-xl { margin-right: @bs3-designer-margin-and-padding-lg-xl; }
+	.margin-right-xxl { margin-right: @bs3-designer-margin-and-padding-lg-xxl; }
+
+	.padding-right-xxs { padding-right: @bs3-designer-margin-and-padding-lg-xxs; }
+	.padding-right-xs { padding-right: @bs3-designer-margin-and-padding-lg-xs; }
+	.padding-right-s { padding-right: @bs3-designer-margin-and-padding-lg-s; }
+	.padding-right { padding-right: @bs3-designer-margin-and-padding-lg-m; }
+	.padding-right-l { padding-right: @bs3-designer-margin-and-padding-lg-l; }
+	.padding-right-xl { padding-right: @bs3-designer-margin-and-padding-lg-xl; }
+	.padding-right-xxl { padding-right: @bs3-designer-margin-and-padding-lg-xxl; }
+}
+
+// Horizontal
+@media @media-query-mobile-only {
+
+	.margin-x-xxs { margin-left: @bs3-designer-margin-and-padding-xs-xxs; margin-right: @bs3-designer-margin-and-padding-xs-xxs; }
+	.margin-x-xs { margin-left: @bs3-designer-margin-and-padding-xs-xs; margin-right: @bs3-designer-margin-and-padding-xs-xs; }
+	.margin-x-s { margin-left: @bs3-designer-margin-and-padding-xs-s; margin-right: @bs3-designer-margin-and-padding-xs-s; }
+	.margin-x { margin-left: @bs3-designer-margin-and-padding-xs-m; margin-right: @bs3-designer-margin-and-padding-xs-m; }
+	.margin-x-l { margin-left: @bs3-designer-margin-and-padding-xs-l; margin-right: @bs3-designer-margin-and-padding-xs-l; }
+	.margin-x-xl { margin-left: @bs3-designer-margin-and-padding-xs-xl; margin-right: @bs3-designer-margin-and-padding-xs-xl; }
+	.margin-x-xxl { margin-left: @bs3-designer-margin-and-padding-xs-xxl; margin-right: @bs3-designer-margin-and-padding-xs-xxl; }
+
+	.padding-x-xxs { padding-left: @bs3-designer-margin-and-padding-xs-xxs; padding-right: @bs3-designer-margin-and-padding-xs-xxs; }
+	.padding-x-xs { padding-left: @bs3-designer-margin-and-padding-xs-xs; padding-right: @bs3-designer-margin-and-padding-xs-xs; }
+	.padding-x-s { padding-left: @bs3-designer-margin-and-padding-xs-s; padding-right: @bs3-designer-margin-and-padding-xs-s; }
+	.padding-x { padding-left: @bs3-designer-margin-and-padding-xs-m; padding-right: @bs3-designer-margin-and-padding-xs-m; }
+	.padding-x-l { padding-left: @bs3-designer-margin-and-padding-xs-l; padding-right: @bs3-designer-margin-and-padding-xs-l; }
+	.padding-x-xl { padding-left: @bs3-designer-margin-and-padding-xs-xl; padding-right: @bs3-designer-margin-and-padding-xs-xl; }
+	.padding-x-xxl { padding-left: @bs3-designer-margin-and-padding-xs-xxl; padding-right: @bs3-designer-margin-and-padding-xs-xxl; }
+}
+@media @media-query-tablet-only {
+
+	.margin-x-xxs { margin-left: @bs3-designer-margin-and-padding-sm-xxs; margin-right: @bs3-designer-margin-and-padding-sm-xxs; }
+	.margin-x-xs { margin-left: @bs3-designer-margin-and-padding-sm-xs; margin-right: @bs3-designer-margin-and-padding-sm-xs; }
+	.margin-x-s { margin-left: @bs3-designer-margin-and-padding-sm-s; margin-right: @bs3-designer-margin-and-padding-sm-s; }
+	.margin-x { margin-left: @bs3-designer-margin-and-padding-sm-m; margin-right: @bs3-designer-margin-and-padding-sm-m; }
+	.margin-x-l { margin-left: @bs3-designer-margin-and-padding-sm-l; margin-right: @bs3-designer-margin-and-padding-sm-l; }
+	.margin-x-xl { margin-left: @bs3-designer-margin-and-padding-sm-xl; margin-right: @bs3-designer-margin-and-padding-sm-xl; }
+	.margin-x-xxl { margin-left: @bs3-designer-margin-and-padding-sm-xxl; margin-right: @bs3-designer-margin-and-padding-sm-xxl; }
+
+	.padding-x-xxs { padding-left: @bs3-designer-margin-and-padding-sm-xxs; padding-right: @bs3-designer-margin-and-padding-sm-xxs; }
+	.padding-x-xs { padding-left: @bs3-designer-margin-and-padding-sm-xs; padding-right: @bs3-designer-margin-and-padding-sm-xs; }
+	.padding-x-s { padding-left: @bs3-designer-margin-and-padding-sm-s; padding-right: @bs3-designer-margin-and-padding-sm-s; }
+	.padding-x { padding-left: @bs3-designer-margin-and-padding-sm-m; padding-right: @bs3-designer-margin-and-padding-sm-m; }
+	.padding-x-l { padding-left: @bs3-designer-margin-and-padding-sm-l; padding-right: @bs3-designer-margin-and-padding-sm-l; }
+	.padding-x-xl { padding-left: @bs3-designer-margin-and-padding-sm-xl; padding-right: @bs3-designer-margin-and-padding-sm-xl; }
+	.padding-x-xxl { padding-left: @bs3-designer-margin-and-padding-sm-xxl; padding-right: @bs3-designer-margin-and-padding-sm-xxl; }
+}
+@media @media-query-desktop-only {
+
+	.margin-x-xxs { margin-left: @bs3-designer-margin-and-padding-md-xxs; margin-right: @bs3-designer-margin-and-padding-md-xxs; }
+	.margin-x-xs { margin-left: @bs3-designer-margin-and-padding-md-xs; margin-right: @bs3-designer-margin-and-padding-md-xs; }
+	.margin-x-s { margin-left: @bs3-designer-margin-and-padding-md-s; margin-right: @bs3-designer-margin-and-padding-md-s; }
+	.margin-x { margin-left: @bs3-designer-margin-and-padding-md-m; margin-right: @bs3-designer-margin-and-padding-md-m; }
+	.margin-x-l { margin-left: @bs3-designer-margin-and-padding-md-l; margin-right: @bs3-designer-margin-and-padding-md-l; }
+	.margin-x-xl { margin-left: @bs3-designer-margin-and-padding-md-xl; margin-right: @bs3-designer-margin-and-padding-md-xl; }
+	.margin-x-xxl { margin-left: @bs3-designer-margin-and-padding-md-xxl; margin-right: @bs3-designer-margin-and-padding-md-xxl; }
+
+	.padding-x-xxs { padding-left: @bs3-designer-margin-and-padding-md-xxs; padding-right: @bs3-designer-margin-and-padding-md-xxs; }
+	.padding-x-xs { padding-left: @bs3-designer-margin-and-padding-md-xs; padding-right: @bs3-designer-margin-and-padding-md-xs; }
+	.padding-x-s { padding-left: @bs3-designer-margin-and-padding-md-s; padding-right: @bs3-designer-margin-and-padding-md-s; }
+	.padding-x { padding-left: @bs3-designer-margin-and-padding-md-m; padding-right: @bs3-designer-margin-and-padding-md-m; }
+	.padding-x-l { padding-left: @bs3-designer-margin-and-padding-md-l; padding-right: @bs3-designer-margin-and-padding-md-l; }
+	.padding-x-xl { padding-left: @bs3-designer-margin-and-padding-md-xl; padding-right: @bs3-designer-margin-and-padding-md-xl; }
+	.padding-x-xxl { padding-left: @bs3-designer-margin-and-padding-md-xxl; padding-right: @bs3-designer-margin-and-padding-md-xxl; }
+}
+@media @media-query-large-desktop-only {
+
+	.margin-x-xxs { margin-left: @bs3-designer-margin-and-padding-lg-xxs; margin-right: @bs3-designer-margin-and-padding-lg-xxs; }
+	.margin-x-xs { margin-left: @bs3-designer-margin-and-padding-lg-xs; margin-right: @bs3-designer-margin-and-padding-lg-xs; }
+	.margin-x-s { margin-left: @bs3-designer-margin-and-padding-lg-s; margin-right: @bs3-designer-margin-and-padding-lg-s; }
+	.margin-x { margin-left: @bs3-designer-margin-and-padding-lg-m; margin-right: @bs3-designer-margin-and-padding-lg-m; }
+	.margin-x-l { margin-left: @bs3-designer-margin-and-padding-lg-l; margin-right: @bs3-designer-margin-and-padding-lg-l; }
+	.margin-x-xl { margin-left: @bs3-designer-margin-and-padding-lg-xl; margin-right: @bs3-designer-margin-and-padding-lg-xl; }
+	.margin-x-xxl { margin-left: @bs3-designer-margin-and-padding-lg-xxl; margin-right: @bs3-designer-margin-and-padding-lg-xxl; }
+
+	.padding-x-xxs { padding-left: @bs3-designer-margin-and-padding-lg-xxs; padding-right: @bs3-designer-margin-and-padding-lg-xxs; }
+	.padding-x-xs { padding-left: @bs3-designer-margin-and-padding-lg-xs; padding-right: @bs3-designer-margin-and-padding-lg-xs; }
+	.padding-x-s { padding-left: @bs3-designer-margin-and-padding-lg-s; padding-right: @bs3-designer-margin-and-padding-lg-s; }
+	.padding-x { padding-left: @bs3-designer-margin-and-padding-lg-m; padding-right: @bs3-designer-margin-and-padding-lg-m; }
+	.padding-x-l { padding-left: @bs3-designer-margin-and-padding-lg-l; padding-right: @bs3-designer-margin-and-padding-lg-l; }
+	.padding-x-xl { padding-left: @bs3-designer-margin-and-padding-lg-xl; padding-right: @bs3-designer-margin-and-padding-lg-xl; }
+	.padding-x-xxl { padding-left: @bs3-designer-margin-and-padding-lg-xxl; padding-right: @bs3-designer-margin-and-padding-lg-xxl; }
+}
+
+// Vertical
+@media @media-query-mobile-only {
+
+	.margin-y-xxs { margin-top: @bs3-designer-margin-and-padding-xs-xxs; margin-bottom: @bs3-designer-margin-and-padding-xs-xxs; }
+	.margin-y-xs { margin-top: @bs3-designer-margin-and-padding-xs-xs; margin-bottom: @bs3-designer-margin-and-padding-xs-xs; }
+	.margin-y-s { margin-top: @bs3-designer-margin-and-padding-xs-s; margin-bottom: @bs3-designer-margin-and-padding-xs-s; }
+	.margin-y { margin-top: @bs3-designer-margin-and-padding-xs-m; margin-bottom: @bs3-designer-margin-and-padding-xs-m; }
+	.margin-y-l { margin-top: @bs3-designer-margin-and-padding-xs-l; margin-bottom: @bs3-designer-margin-and-padding-xs-l; }
+	.margin-y-xl { margin-top: @bs3-designer-margin-and-padding-xs-xl; margin-bottom: @bs3-designer-margin-and-padding-xs-xl; }
+	.margin-y-xxl { margin-top: @bs3-designer-margin-and-padding-xs-xxl; margin-bottom: @bs3-designer-margin-and-padding-xs-xxl; }
+
+	.padding-y-xxs { padding-top: @bs3-designer-margin-and-padding-xs-xxs; padding-bottom: @bs3-designer-margin-and-padding-xs-xxs; }
+	.padding-y-xs { padding-top: @bs3-designer-margin-and-padding-xs-xs; padding-bottom: @bs3-designer-margin-and-padding-xs-xs; }
+	.padding-y-s { padding-top: @bs3-designer-margin-and-padding-xs-s; padding-bottom: @bs3-designer-margin-and-padding-xs-s; }
+	.padding-y { padding-top: @bs3-designer-margin-and-padding-xs-m; padding-bottom: @bs3-designer-margin-and-padding-xs-m; }
+	.padding-y-l { padding-top: @bs3-designer-margin-and-padding-xs-l; padding-bottom: @bs3-designer-margin-and-padding-xs-l; }
+	.padding-y-xl { padding-top: @bs3-designer-margin-and-padding-xs-xl; padding-bottom: @bs3-designer-margin-and-padding-xs-xl; }
+	.padding-y-xxl { padding-top: @bs3-designer-margin-and-padding-xs-xxl; padding-bottom: @bs3-designer-margin-and-padding-xs-xxl; }
+}
+@media @media-query-tablet-only {
+
+	.margin-y-xxs { margin-top: @bs3-designer-margin-and-padding-sm-xxs; margin-bottom: @bs3-designer-margin-and-padding-sm-xxs; }
+	.margin-y-xs { margin-top: @bs3-designer-margin-and-padding-sm-xs; margin-bottom: @bs3-designer-margin-and-padding-sm-xs; }
+	.margin-y-s { margin-top: @bs3-designer-margin-and-padding-sm-s; margin-bottom: @bs3-designer-margin-and-padding-sm-s; }
+	.margin-y { margin-top: @bs3-designer-margin-and-padding-sm-m; margin-bottom: @bs3-designer-margin-and-padding-sm-m; }
+	.margin-y-l { margin-top: @bs3-designer-margin-and-padding-sm-l; margin-bottom: @bs3-designer-margin-and-padding-sm-l; }
+	.margin-y-xl { margin-top: @bs3-designer-margin-and-padding-sm-xl; margin-bottom: @bs3-designer-margin-and-padding-sm-xl; }
+	.margin-y-xxl { margin-top: @bs3-designer-margin-and-padding-sm-xxl; margin-bottom: @bs3-designer-margin-and-padding-sm-xxl; }
+
+	.padding-y-xxs { padding-top: @bs3-designer-margin-and-padding-sm-xxs; padding-bottom: @bs3-designer-margin-and-padding-sm-xxs; }
+	.padding-y-xs { padding-top: @bs3-designer-margin-and-padding-sm-xs; padding-bottom: @bs3-designer-margin-and-padding-sm-xs; }
+	.padding-y-s { padding-top: @bs3-designer-margin-and-padding-sm-s; padding-bottom: @bs3-designer-margin-and-padding-sm-s; }
+	.padding-y { padding-top: @bs3-designer-margin-and-padding-sm-m; padding-bottom: @bs3-designer-margin-and-padding-sm-m; }
+	.padding-y-l { padding-top: @bs3-designer-margin-and-padding-sm-l; padding-bottom: @bs3-designer-margin-and-padding-sm-l; }
+	.padding-y-xl { padding-top: @bs3-designer-margin-and-padding-sm-xl; padding-bottom: @bs3-designer-margin-and-padding-sm-xl; }
+	.padding-y-xxl { padding-top: @bs3-designer-margin-and-padding-sm-xxl; padding-bottom: @bs3-designer-margin-and-padding-sm-xxl; }
+}
+@media @media-query-desktop-only {
+
+	.margin-y-xxs { margin-top: @bs3-designer-margin-and-padding-md-xxs; margin-bottom: @bs3-designer-margin-and-padding-md-xxs; }
+	.margin-y-xs { margin-top: @bs3-designer-margin-and-padding-md-xs; margin-bottom: @bs3-designer-margin-and-padding-md-xs; }
+	.margin-y-s { margin-top: @bs3-designer-margin-and-padding-md-s; margin-bottom: @bs3-designer-margin-and-padding-md-s; }
+	.margin-y { margin-top: @bs3-designer-margin-and-padding-md-m; margin-bottom: @bs3-designer-margin-and-padding-md-m; }
+	.margin-y-l { margin-top: @bs3-designer-margin-and-padding-md-l; margin-bottom: @bs3-designer-margin-and-padding-md-l; }
+	.margin-y-xl { margin-top: @bs3-designer-margin-and-padding-md-xl; margin-bottom: @bs3-designer-margin-and-padding-md-xl; }
+	.margin-y-xxl { margin-top: @bs3-designer-margin-and-padding-md-xxl; margin-bottom: @bs3-designer-margin-and-padding-md-xxl; }
+
+	.padding-y-xxs { padding-top: @bs3-designer-margin-and-padding-md-xxs; padding-bottom: @bs3-designer-margin-and-padding-md-xxs; }
+	.padding-y-xs { padding-top: @bs3-designer-margin-and-padding-md-xs; padding-bottom: @bs3-designer-margin-and-padding-md-xs; }
+	.padding-y-s { padding-top: @bs3-designer-margin-and-padding-md-s; padding-bottom: @bs3-designer-margin-and-padding-md-s; }
+	.padding-y { padding-top: @bs3-designer-margin-and-padding-md-m; padding-bottom: @bs3-designer-margin-and-padding-md-m; }
+	.padding-y-l { padding-top: @bs3-designer-margin-and-padding-md-l; padding-bottom: @bs3-designer-margin-and-padding-md-l; }
+	.padding-y-xl { padding-top: @bs3-designer-margin-and-padding-md-xl; padding-bottom: @bs3-designer-margin-and-padding-md-xl; }
+	.padding-y-xxl { padding-top: @bs3-designer-margin-and-padding-md-xxl; padding-bottom: @bs3-designer-margin-and-padding-md-xxl; }
+}
+@media @media-query-large-desktop-only {
+
+	.margin-y-xxs { margin-top: @bs3-designer-margin-and-padding-lg-xxs; margin-bottom: @bs3-designer-margin-and-padding-lg-xxs; }
+	.margin-y-xs { margin-top: @bs3-designer-margin-and-padding-lg-xs; margin-bottom: @bs3-designer-margin-and-padding-lg-xs; }
+	.margin-y-s { margin-top: @bs3-designer-margin-and-padding-lg-s; margin-bottom: @bs3-designer-margin-and-padding-lg-s; }
+	.margin-y { margin-top: @bs3-designer-margin-and-padding-lg-m; margin-bottom: @bs3-designer-margin-and-padding-lg-m; }
+	.margin-y-l { margin-top: @bs3-designer-margin-and-padding-lg-l; margin-bottom: @bs3-designer-margin-and-padding-lg-l; }
+	.margin-y-xl { margin-top: @bs3-designer-margin-and-padding-lg-xl; margin-bottom: @bs3-designer-margin-and-padding-lg-xl; }
+	.margin-y-xxl { margin-top: @bs3-designer-margin-and-padding-lg-xxl; margin-bottom: @bs3-designer-margin-and-padding-lg-xxl; }
+
+	.padding-y-xxs { padding-top: @bs3-designer-margin-and-padding-lg-xxs; padding-bottom: @bs3-designer-margin-and-padding-lg-xxs; }
+	.padding-y-xs { padding-top: @bs3-designer-margin-and-padding-lg-xs; padding-bottom: @bs3-designer-margin-and-padding-lg-xs; }
+	.padding-y-s { padding-top: @bs3-designer-margin-and-padding-lg-s; padding-bottom: @bs3-designer-margin-and-padding-lg-s; }
+	.padding-y { padding-top: @bs3-designer-margin-and-padding-lg-m; padding-bottom: @bs3-designer-margin-and-padding-lg-m; }
+	.padding-y-l { padding-top: @bs3-designer-margin-and-padding-lg-l; padding-bottom: @bs3-designer-margin-and-padding-lg-l; }
+	.padding-y-xl { padding-top: @bs3-designer-margin-and-padding-lg-xl; padding-bottom: @bs3-designer-margin-and-padding-lg-xl; }
+	.padding-y-xxl { padding-top: @bs3-designer-margin-and-padding-lg-xxl; padding-bottom: @bs3-designer-margin-and-padding-lg-xxl; }
+}

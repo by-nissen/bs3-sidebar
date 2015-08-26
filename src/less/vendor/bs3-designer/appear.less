@@ -1,0 +1,158 @@
+// |--------------------------------------------------------------------------
+// | Appear
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .animation-appear-from-top
+// | - .animation-appear-from-bottom
+// | - .animation-appear-from-left
+// | - .animation-appear-from-right
+// |
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Top
+.animation-appear-from-top {
+	.opacity(0);
+
+	&.animation-start {
+		-webkit-animation: .8s cubic-bezier(1, 0, 0, 1) appearFromTop;
+		animation: .8s cubic-bezier(1, 0, 0, 1) appearFromTop;
+		.opacity(1);
+	}
+}
+@keyframes appearFromTop {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateY(-100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateY(0);
+	}
+}
+@-webkit-keyframes appearFromTop {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateY(-100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateY(0);
+	}
+}
+
+// Bottom
+.animation-appear-from-bottom {
+	.opacity(0);
+
+	&.animation-start {
+		-webkit-animation: .8s cubic-bezier(1, 0, 0, 1) appearFromBottom;
+		animation: .8s cubic-bezier(1, 0, 0, 1) appearFromBottom;
+		.opacity(1);
+	}
+}
+@keyframes appearFromBottom {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateY(100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateY(0);
+	}
+}
+@-webkit-keyframes appearFromBottom {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateY(100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateY(0);
+	}
+}
+
+// Left
+.animation-appear-from-left {
+	.opacity(0);
+
+	&.animation-start {
+		animation: .8s cubic-bezier(1, 0 ,0 ,1) appearFromLeft;
+		-webkit-animation: .8s cubic-bezier(1, 0, 0, 1) appearFromLeft;
+		.opacity(1);
+	}
+}
+@keyframes appearFromLeft {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateX(-100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateX(0);
+	}
+}
+@-webkit-keyframes appearFromLeft {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateX(-100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateX(0);
+	}
+}
+
+// Right
+.animation-appear-from-right {
+	.opacity(0);
+
+	&.animation-start {
+		animation: .8s cubic-bezier(1, 0 ,0 ,1) appearFromRight;
+		-webkit-animation: .8s cubic-bezier(1, 0, 0, 1) appearFromRight;
+		.opacity(1);
+	}
+}
+@keyframes appearFromRight {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateX(100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateX(0);
+	}
+}
+@-webkit-keyframes appearFromRight {
+	from {
+		.opacity(0);
+		.bs3-designer-mixin-translateX(100px);
+	}
+	to {
+		.opacity(1);
+		.bs3-designer-mixin-translateX(0);
+	}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Translate Y
+.bs3-designer-mixin-translateY(@y) {
+	-webkit-transform: translateY(@y);
+	-ms-transform: translateY(@y); // IE9 only
+	-o-transform: translateY(@y);
+	transform: translateY(@y);
+}
+
+// Translate X
+.bs3-designer-mixin-translateX(@x) {
+	-webkit-transform: translateX(@x);
+	-ms-transform: translateX(@x); // IE9 only
+	-o-transform: translateX(@x);
+	transform: translateX(@x);
+}
