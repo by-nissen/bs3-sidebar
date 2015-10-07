@@ -28208,126 +28208,126 @@ if (typeof jQuery === 'undefined') {
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 
 var bs3Designer = (function ($) {
-  'use strict';
+    'use strict';
 
-  var Modernizr = {};
-  var pub = {};
+    var Modernizr = {};
+    var pub = {};
 
-  /**
-   * Instantiate
-   */
-  pub.init = function () {
-    registerEventHandlers();
-    always();
-  }
-
-  /**
-   * Register event handlers
-   */
-  function registerEventHandlers() {
-
-    $(window).resize(function () {
-      footerAttached();
-    });
-
-    $('.btn-loader').on('click', function () {
-      iconSpin($(this));
-    });
-  }
-
-  /**
-   * Always
-   */
-  function always() {
-    if (!Modernizr.touch) {
-      footerAttached();
-      optimizeFormElements();
+    /**
+     * Instantiate
+     */
+    pub.init = function () {
+        registerBootEventHandlers();
+        registerEventHandlers();
     }
 
-    appear();
-    bs3Tooltip();
-  }
+    /**
+     * Register boot event handlers
+     */
+    function registerBootEventHandlers() {
+        if ( ! Modernizr.touch) {
+            footerAttached();
+            optimizeFormElements();
+        }
 
-  /**
-   * Footer attached
-   */
-  function footerAttached() {
-    var $footer = $('.footer');
-    var footerHeight = $footer.outerHeight(true);
-
-    if ($('body').hasClass('footer-attached')) {
-      $('.inner-wrapper').css('padding-bottom', footerHeight);
-    }
-  }
-
-  /**
-   * Appear
-   */
-  function appear() {
-    var $appear = $('.appear');
-    var $animation = $('.animation');
-
-    if (Modernizr.touch || !Modernizr.cssanimations) {
-
-      $animation
-          .removeClass('animation')
-          .removeClass('animation-appear-from-top')
-          .removeClass('animation-appear-from-right')
-          .removeClass('animation-appear-from-left')
-          .removeClass('animation-appear-from-bottom')
-          .removeClass('animation-appear-from-center');
-
-      return false;
+        appear();
+        bs3Tooltip();
     }
 
-    // Enable appear
-    $appear.appear();
+    /**
+     * Register event handlers
+     */
+    function registerEventHandlers() {
 
-    // Force processing on animation objects
-    $animation.appear({
-      force_process: true
-    });
+        $(window).resize(function () {
+            footerAttached();
+        });
 
-    // Animation object has appeared
-    $animation.on('appear', function () {
-
-      var $element = $(this);
-      var delay = $element.data('delay');
-
-      setTimeout(function () {
-        $element.addClass('animation-start');
-      }, delay);
-    });
-  }
-
-  /**
-   * BS tooltip
-   */
-  function bs3Tooltip() {
-    if (Modernizr.touch) {
-      $('[data-toggle=tooltip]').tooltip('hide');
-
-      return false;
+        $('.btn-loader').on('click', function () {
+            iconSpin($(this));
+        });
     }
 
-    $('[data-toggle=tooltip]').tooltip();
-  }
+    /**
+     * Footer attached
+     */
+    function footerAttached() {
+        var $footer = $('.footer');
+        var footerHeight = $footer.outerHeight(true);
 
-  /**
-   * Optimize form elements
-   */
-  function optimizeFormElements() {
-    $('form').attr('autocomplete', 'off');
-  }
+        if ($('body').hasClass('footer-attached')) {
+            $('.inner-wrapper').css('padding-bottom', footerHeight);
+        }
+    }
 
-  /**
-   * Icon spin
-   */
-  function iconSpin($element) {
-    $element.find('.icon').addClass('icon-spin');
-  }
+    /**
+     * Appear
+     */
+    function appear() {
+        var $appear = $('.appear');
+        var $animation = $('.animation');
 
-  return pub;
+        if (Modernizr.touch || !Modernizr.cssanimations) {
+
+            $animation
+                .removeClass('animation')
+                .removeClass('animation-appear-from-top')
+                .removeClass('animation-appear-from-right')
+                .removeClass('animation-appear-from-left')
+                .removeClass('animation-appear-from-bottom')
+                .removeClass('animation-appear-from-center');
+
+            return false;
+        }
+
+        // Enable appear
+        $appear.appear();
+
+        // Force processing on animation objects
+        $animation.appear({
+            force_process: true
+        });
+
+        // Animation object has appeared
+        $animation.on('appear', function () {
+
+            var $element = $(this);
+            var delay = $element.data('delay');
+
+            setTimeout(function () {
+                $element.addClass('animation-start');
+            }, delay);
+        });
+    }
+
+    /**
+     * BS tooltip
+     */
+    function bs3Tooltip() {
+        if (Modernizr.touch) {
+            $('[data-toggle=tooltip]').tooltip('hide');
+
+            return false;
+        }
+
+        $('[data-toggle=tooltip]').tooltip();
+    }
+
+    /**
+     * Optimize form elements
+     */
+    function optimizeFormElements() {
+        $('form').attr('autocomplete', 'off');
+    }
+
+    /**
+     * Icon spin
+     */
+    function iconSpin($element) {
+        $element.find('.icon').addClass('icon-spin');
+    }
+
+    return pub;
 })(jQuery);
 
 (function($) {
