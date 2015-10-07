@@ -1,6 +1,4 @@
 src/vendor
 node_modules/
-dist/
 dist/css/*
-dist/fonts/*
 dist/js/*
