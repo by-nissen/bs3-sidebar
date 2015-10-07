@@ -1,0 +1,199 @@
+// |--------------------------------------------------------------------------
+// | Header simple
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// |
+// | - Base
+// | - Logo
+// | - Sticky
+// | - Navigation
+// | -- Button
+// | - View modes
+// | - Sidebar toggle
+// |
+
+.header-simple-navigation {
+  display: none;
+
+  .header-navbar {
+    height: @bs3-simple-navigation-height;
+    min-height: @bs3-simple-navigation-height;
+    line-height: @bs3-simple-navigation-height;
+    background-color: @bs3-simple-navigation-background-color;
+    background-color: @bs3-simple-navigation-background-color-rgba;
+  }
+
+  // Let's all elements inherit the height and line height of parent element
+  .container,
+  .container-fluid,
+  .row,
+  .header-navbar-content,
+  .header-nav {
+    height: inherit;
+    min-height: inherit;
+    line-height: inherit;
+  }
+}
+
+// Logo
+.header-simple-navigation {
+
+  .header-logo {
+    display: inline-block;
+    width: @bs3-simple-navigation-logo-width;
+    height: inherit;
+    line-height: inherit;
+
+    .img-retina("@{bs3-simple-navigation-path-image}header-simple-navigation-logo-1x.png", "@{bs3-simple-navigation-path-image}header-simple-navigation-logo-2x.png", @bs3-simple-navigation-logo-width, @bs3-simple-navigation-logo-height);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+// Sticky
+.header-simple-navigation-sticky {
+
+  .header-simple-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: @bs3-simple-navigation-sticky-zindex;
+  }
+}
+
+// Navigation
+.header-simple-navigation {
+
+  .header-nav {
+    min-height: inherit;
+    line-height: inherit;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      line-height: inherit;
+      float: left;
+    }
+
+    .header-nav-button {
+
+      .btn {
+        display: block;
+        line-height: inherit;
+        margin: 0;
+        padding: 0 @bs3-simple-navigation-nav-element-spacing;
+        border: 0;
+        border-radius: 0;
+        background-color: @bs3-simple-navigation-nav-button-background-color;
+        background-color: @bs3-simple-navigation-nav-button-background-color-rgba;
+
+        .icon {
+          font-size: @bs3-simple-navigation-nav-button-icon-font-size;
+          color: @bs3-simple-navigation-nav-button-icon-color;
+        }
+
+        &:hover {
+
+          .icon {
+            color: @bs3-simple-navigation-nav-button-hover-icon-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Positioning
+.header-simple-navigation {
+
+  .header-left {
+    .header-position-left();
+  }
+  .header-center {
+    .header-position-center();
+  }
+  .header-right {
+    .header-position-right();
+  }
+}
+
+// Enabled
+@media @media-query-mobile-only {
+
+  .header-simple-navigation-enabled-xs {
+
+    .header-simple-navigation {
+      display: block;
+    }
+
+    &.header-simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}
+@media @media-query-tablet-only {
+
+  .header-simple-navigation-enabled-sm {
+
+    .header-simple-navigation {
+      display: block;
+    }
+
+    &.header-simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}
+@media @media-query-desktop-only {
+
+  .header-simple-navigation-enabled-md {
+
+    .header-simple-navigation {
+      display: block;
+    }
+
+    &.header-simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}
+@media @media-query-large-desktop-only {
+
+  .header-simple-navigation-enabled-lg {
+
+    .header-simple-navigation {
+      display: block;
+    }
+
+    &.header-simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}

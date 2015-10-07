@@ -1,0 +1,27 @@
+// |--------------------------------------------------------------------------
+// | Header simple
+// |--------------------------------------------------------------------------
+
+//== Base
+@bs3-simple-navigation-height:                                              50px;
+
+//== Sticky
+@bs3-simple-navigation-sticky-zindex:                                       @zindex-navbar-fixed;
+
+//== Logo
+@bs3-simple-navigation-path-image:                                          "@{path-image}bs3-navigation/";
+@bs3-simple-navigation-logo-height:                                         36px;
+@bs3-simple-navigation-logo-width:                                          208px;
+
+//== Nav - base
+@bs3-simple-navigation-nav-element-spacing:                                 10px;
+
+//== Nav - button
+@bs3-simple-navigation-nav-button-icon-font-size:                           floor((@bs3-simple-navigation-height * 0.4));
+
+//== Nav - button - sidebar toggle
+@bs3-simple-navigation-nav-sidebar-toggle-height:                           @bs3-simple-navigation-height; // Make it a square
+@bs3-simple-navigation-nav-sidebar-toggle-width:                            @bs3-simple-navigation-nav-sidebar-toggle-height; // Make it a square
+@bs3-simple-navigation-nav-sidebar-toggle-line-height:                      3px;
+@bs3-simple-navigation-nav-sidebar-toggle-line-width:                       floor((@bs3-simple-navigation-nav-sidebar-toggle-width * 0.4));
+@bs3-simple-navigation-nav-sidebar-toggle-line-spacing:                     floor((@bs3-simple-navigation-nav-sidebar-toggle-line-height * 2.5));
