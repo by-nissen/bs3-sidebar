@@ -1,0 +1,172 @@
+// |--------------------------------------------------------------------------
+// | Sidebar
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .sidebar
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@bs3-sidebar-background-color: @sidebar-background-color;
+@bs3-sidebar-transition-time: @sidebar-transition-time;
+@bs3-sidebar-scrollbar-width: 20px;
+@bs3-sidebar-box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.2);
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Sidebar
+.sidebar {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	padding-right: @bs3-sidebar-scrollbar-width;
+	background-color: @bs3-sidebar-background-color;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&.sidebar-left {
+		left: 0;
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	.sidebar-left-mixin-enabled(xs);
+	.sidebar-mixin-inner-wrapper(xs);
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	.sidebar-left-mixin-enabled(sm);
+	.sidebar-mixin-inner-wrapper(sm);
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	.sidebar-left-mixin-enabled(md);
+	.sidebar-mixin-inner-wrapper(md);
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	.sidebar-left-mixin-enabled(lg);
+	.sidebar-mixin-inner-wrapper(lg);
+
+	// Sidebar
+	.sidebar {}
+}
+
+// Print
+@media print {
+
+	// Sidebar
+	.sidebar {
+		display: none;
+	}
+
+	.inner-wrapper {
+		left: 0;
+		right: 0;
+	}
+}
+
+// Touch
+.touch {
+
+	// Sidebar
+	.sidebar {}
+}
+
+// No touch
+.no-touch {
+
+	// Sidebar
+	.sidebar {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Enabled mixin
+.sidebar-left-mixin-enabled(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		.sidebar-left {
+			display: block;
+		}
+	}
+}
+
+// Inner wrapper mixin
+.sidebar-mixin-inner-wrapper(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		.inner-wrapper {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			min-height: inherit;
+			.box-shadow(@bs3-sidebar-box-shadow);
+		}
+	}
+}

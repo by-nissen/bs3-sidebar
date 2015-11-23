@@ -1,0 +1,222 @@
+// |--------------------------------------------------------------------------
+// | Hidden
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .sidebar-left-hidden
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@bs3-sidebar-left-hidden-width: @sidebar-hidden-width;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Hidden
+.sidebar-left-hidden {}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	.sidebar-left-mixin-hidden(xs);
+	.sidebar-mixin-logo-image-hidden(xs);
+	.sidebar-mixin-navigation-hidden(xs);
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	.sidebar-left-mixin-hidden(sm);
+	.sidebar-mixin-logo-image-hidden(sm);
+	.sidebar-mixin-navigation-hidden(sm);
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	.sidebar-left-mixin-hidden(md);
+	.sidebar-mixin-logo-image-hidden(md);
+	.sidebar-mixin-navigation-hidden(md);
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	.sidebar-left-mixin-hidden(lg);
+	.sidebar-mixin-logo-image-hidden(lg);
+	.sidebar-mixin-navigation-hidden(lg);
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Print
+@media print {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// Touch
+.touch {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// No touch
+.no-touch {
+
+	// Hidden
+	.sidebar-left-hidden {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Hidden mixin
+.sidebar-left-mixin-hidden(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		&.sidebar-left-hidden-@{view-mode} {
+
+			.sidebar-left {
+				width: (@bs3-sidebar-left-hidden-width + @bs3-sidebar-scrollbar-width);
+			}
+
+			.inner-wrapper {
+				left: 0;
+			}
+
+			.sidebar-left,
+			.inner-wrapper {
+				.transition(all @bs3-sidebar-transition-time cubic-bezier(0.445, 0.05, 0.55, 0.95));
+			}
+		}
+	}
+
+	.csstransforms3d {
+
+		.sidebar-left-enabled-@{view-mode} {
+
+			&.sidebar-left-hidden-@{view-mode} {
+
+				&.sidebar-left-open {
+
+					&.sidebar-left-content-shrink-@{view-mode},
+					&.sidebar-left-content-push-@{view-mode} {
+
+						.inner-wrapper {
+							.translate3d(@bs3-sidebar-left-hidden-width, 0, 0);
+						}
+					}
+
+					&.sidebar-left-content-shrink-@{view-mode} {
+
+						.inner-wrapper {
+							margin-right: @bs3-sidebar-left-hidden-width;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.no-csstransforms3d {
+
+		.sidebar-left-enabled-@{view-mode} {
+
+			&.sidebar-left-hidden-@{view-mode} {
+
+				&.sidebar-left-open {
+
+					&.sidebar-left-content-shrink-@{view-mode},
+					&.sidebar-left-content-push-@{view-mode} {
+
+						.inner-wrapper {
+							left: @bs3-sidebar-left-hidden-width;
+						}
+					}
+
+					&.sidebar-left-content-push-@{view-mode} {
+
+						.inner-wrapper {
+							right: (0 - @bs3-sidebar-left-hidden-width);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Navigation mixin
+.sidebar-mixin-navigation-hidden(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		&.sidebar-left-hidden-@{view-mode} {
+
+			.sidebar-mixin-navigation-wide(@view-mode);
+		}
+	}
+}
+
+// Logo mixin
+.sidebar-mixin-logo-image-hidden(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		&.sidebar-left-hidden-@{view-mode} {
+
+			.sidebar-mixin-logo-image-wide();
+		}
+	}
+}

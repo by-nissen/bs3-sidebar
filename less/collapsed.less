@@ -1,0 +1,185 @@
+// |--------------------------------------------------------------------------
+// | Collapsed
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .sidebar-left-collapsed
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@bs3-sidebar-left-collapsed-width: @sidebar-collapsed-width;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Collapsed
+.sidebar-left-collapsed {}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	.sidebar-mixin-left-collapsed(xs);
+	.sidebar-mixin-logo-image-collapsed(xs);
+	.sidebar-mixin-navigation-collapsed(xs);
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	.sidebar-mixin-left-collapsed(sm);
+	.sidebar-mixin-logo-image-collapsed(sm);
+	.sidebar-mixin-navigation-collapsed(sm);
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	.sidebar-mixin-left-collapsed(md);
+	.sidebar-mixin-logo-image-collapsed(md);
+	.sidebar-mixin-navigation-collapsed(md);
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	.sidebar-mixin-left-collapsed(lg);
+	.sidebar-mixin-logo-image-collapsed(lg);
+	.sidebar-mixin-navigation-collapsed(lg);
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Print
+@media print {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// Touch
+.touch {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// No touch
+.no-touch {
+
+	// Collapsed
+	.sidebar-left-collapsed {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Collapsed mixin
+.sidebar-mixin-left-collapsed(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		&.sidebar-left-collapsed-@{view-mode} {
+
+			.sidebar-left {
+				width: (@bs3-sidebar-left-collapsed-width + @bs3-sidebar-scrollbar-width);
+			}
+
+			.inner-wrapper {
+				left: @bs3-sidebar-left-collapsed-width;
+			}
+		}
+	}
+}
+
+// Navigation mixin
+.sidebar-mixin-navigation-collapsed(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		&.sidebar-left-collapsed-@{view-mode} {
+
+			.sidebar-mixin-navigation-narrow(@view-mode);
+		}
+	}
+
+	.no-touch {
+
+		.sidebar-left-enabled-@{view-mode} {
+
+			&.sidebar-left-collapsed-@{view-mode} {
+
+				.sidebar-mixin-navigation-narrow-no-touch(@view-mode);
+			}
+		}
+	}
+
+	.touch {
+
+		.sidebar-left-enabled-@{view-mode} {
+
+			&.sidebar-left-collapsed-@{view-mode} {
+
+				.sidebar-mixin-navigation-narrow-touch(@view-mode);
+			}
+		}
+	}
+}
+
+// Logo mixin
+.sidebar-mixin-logo-image-collapsed(@view-mode) {
+
+	.sidebar-left-enabled-@{view-mode} {
+
+		&.sidebar-left-collapsed-@{view-mode} {
+
+			.sidebar-mixin-logo-image-narrow();
+		}
+	}
+}

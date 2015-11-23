@@ -1,0 +1,174 @@
+// |--------------------------------------------------------------------------
+// | Logo
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .sidebar-logo
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@bs3-sidebar-logo-background-color: @sidebar-logo-background-color;
+@bs3-sidebar-logo-background-color-rgba: @sidebar-logo-background-color-rgba;
+
+@bs3-sidebar-logo-border-width: @sidebar-logo-border-width;
+@bs3-sidebar-logo-border-color: @sidebar-logo-border-color;
+@bs3-sidebar-logo-border-color-rgba: @sidebar-logo-border-color-rgba;
+
+@bs3-sidebar-logo-narrow-width: @sidebar-logo-narrow-width;
+@bs3-sidebar-logo-wide-width: @sidebar-logo-wide-width;
+@bs3-sidebar-logo-top-bottom-spacing: @sidebar-logo-top-bottom-spacing;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Logo
+.sidebar-logo {
+	display: block;
+	max-width: 100%;
+	text-align: center;
+	overflow-x: hidden;
+	background-color: @bs3-sidebar-logo-background-color;
+	background-color: @bs3-sidebar-logo-background-color-rgba;
+	border-bottom-style: solid;
+	border-bottom-width: @bs3-sidebar-logo-border-width;
+	border-bottom-color: @bs3-sidebar-logo-border-color;
+	border-bottom-color: @bs3-sidebar-logo-border-color-rgba;
+
+	a {
+		display: block;
+		padding: @bs3-sidebar-logo-top-bottom-spacing 0;
+
+		img {
+			display: block;
+			max-width: 100%;
+			border: 0;
+			margin: auto;
+		}
+	}
+
+	.sidebar-logo-image {
+		display: none;
+
+		&.sidebar-logo-image-narrow {
+			width: floor( (@bs3-sidebar-logo-narrow-width / 2) );
+		}
+
+		&.sidebar-logo-image-wide {
+			width: floor( (@bs3-sidebar-logo-wide-width / 2) );
+		}
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Print
+@media print {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// Touch
+.touch {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// No touch
+.no-touch {
+
+	// Logo
+	.sidebar-logo {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Logo mixin
+.sidebar-mixin-logo() {}
+
+// Logo image - narrow mixin
+.sidebar-mixin-logo-image-narrow() {
+
+	.sidebar-logo-image {
+
+		&.sidebar-logo-image-narrow {
+			display: block;
+		}
+	}
+}
+
+// Logo image - wide mixin
+.sidebar-mixin-logo-image-wide() {
+
+	.sidebar-logo-image {
+
+		&.sidebar-logo-image-wide {
+			display: block;
+		}
+	}
+}
