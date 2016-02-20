@@ -10,7 +10,6 @@
 var bs3Sidebar = (function ($) {
   'use strict';
 
-  var Modernizr = {};
   var pub = {};
 
   /**
@@ -27,7 +26,7 @@ var bs3Sidebar = (function ($) {
   function registerEventHandlers() {
 
     // Toggle sidebar
-    $('[data-sidebar-toggle]').on('click', function (event) {
+    $('[data-sidebar-toggle]').on('click touchstart', function (event) {
       event.preventDefault();
 
       var $element = $(this);
@@ -36,7 +35,7 @@ var bs3Sidebar = (function ($) {
     });
 
     // Toggle dropdown
-    $('.sidebar .sidebar-navigation-dropdown > a > .sidebar-navigation-dropdown-toggle').on('click', function (event) {
+    $('.sidebar .sidebar-navigation-dropdown > a > .sidebar-navigation-dropdown-toggle').on('click touchstart', function (event) {
       event.preventDefault();
 
       var $element = $(this);
