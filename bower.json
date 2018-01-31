@@ -1,14 +1,13 @@
 {
     "name": "bs3-sidebar",
     "description": "Beautiful off-canvas sidebar for Bootstrap v. 3.x.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "dependencies": {
         "jquery": "~2.*",
         "jquery-ui": "~1.*",
         "bootstrap": "~3.*",
         "fontawesome": "~4.*",
-        "fastclick": "~1.*",
-        "bs3-designer": "~0.*"
+        "fastclick": "~1.*"
     },
     "ignore": [
         "bower_components"
